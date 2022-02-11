@@ -6989,3 +6989,2185 @@ select * from final;
 2022-02-11 09:53:43.180977 (Thread-421): handling status request
 2022-02-11 09:53:43.181193 (Thread-421): 09:53:43  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '31046812-c9f6-455d-b370-961e6e7fd3d5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f586c624610>]}
 2022-02-11 09:53:43.181552 (Thread-421): sending response (<Response 2023 bytes [200 OK]>) to 10.0.5.155
+2022-02-11 10:04:41.325591 (MainThread): Running with dbt=1.0.1
+2022-02-11 10:04:41.487225 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt_rpc.task.server.RPCServerTask'>, debug=None, defer=None, exclude=None, fail_fast=None, host='0.0.0.0', log_cache_events=False, log_format=None, models=None, partial_parse=True, port=8580, printer_width=None, profile='user', profiles_dir='/usr/src/develop/.dbt', project_dir=None, record_timing_info=None, rpc_method=None, send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, threads=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='rpc', write_json=None)
+2022-02-11 10:04:41.492297 (MainThread): Tracking: tracking
+2022-02-11 10:04:41.512377 (Thread-12): 10:04:41  Partial parse save file not found. Starting full parse.
+2022-02-11 10:04:41.512822 (Thread-12): 10:04:41  Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f565f4cb5e0>]}
+2022-02-11 10:04:41.514725 (MainThread): 10:04:41  Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f565b579ca0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f565f4cbca0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f565f4cbb50>]}
+2022-02-11 10:04:41.514990 (MainThread): Serving RPC server at 0.0.0.0:8580, pid=21
+2022-02-11 10:04:41.515180 (MainThread): Supported methods: ['build', 'cli_args', 'compile', 'compile_sql', 'deps', 'docs.generate', 'gc', 'get-manifest', 'kill', 'list', 'poll', 'ps', 'run', 'run-operation', 'run_sql', 'seed', 'snapshot', 'snapshot-freshness', 'source-freshness', 'status', 'test']
+2022-02-11 10:04:41.515311 (MainThread): Send requests to http://localhost:8580/jsonrpc
+2022-02-11 10:04:41.583102 (Thread-12): 10:04:41  Parsing macros/adapters.sql
+2022-02-11 10:04:41.611961 (Thread-12): 10:04:41  Parsing macros/etc.sql
+2022-02-11 10:04:41.614380 (Thread-12): 10:04:41  Parsing macros/catalog.sql
+2022-02-11 10:04:41.619933 (Thread-12): 10:04:41  Parsing macros/materializations/table.sql
+2022-02-11 10:04:41.623733 (Thread-12): 10:04:41  Parsing macros/materializations/seed.sql
+2022-02-11 10:04:41.626163 (Thread-12): 10:04:41  Parsing macros/materializations/incremental.sql
+2022-02-11 10:04:41.640949 (Thread-12): 10:04:41  Parsing macros/materializations/copy.sql
+2022-02-11 10:04:41.643498 (Thread-12): 10:04:41  Parsing macros/materializations/snapshot.sql
+2022-02-11 10:04:41.645134 (Thread-12): 10:04:41  Parsing macros/materializations/view.sql
+2022-02-11 10:04:41.647650 (Thread-12): 10:04:41  Parsing macros/adapters/metadata.sql
+2022-02-11 10:04:41.654456 (Thread-12): 10:04:41  Parsing macros/adapters/columns.sql
+2022-02-11 10:04:41.663930 (Thread-12): 10:04:41  Parsing macros/adapters/freshness.sql
+2022-02-11 10:04:41.666748 (Thread-12): 10:04:41  Parsing macros/adapters/persist_docs.sql
+2022-02-11 10:04:41.671007 (Thread-12): 10:04:41  Parsing macros/adapters/relation.sql
+2022-02-11 10:04:41.680245 (Thread-12): 10:04:41  Parsing macros/adapters/schema.sql
+2022-02-11 10:04:41.682390 (Thread-12): 10:04:41  Parsing macros/adapters/indexes.sql
+2022-02-11 10:04:41.685051 (Thread-12): 10:04:41  Parsing macros/get_custom_name/get_custom_schema.sql
+2022-02-11 10:04:41.687609 (Thread-12): 10:04:41  Parsing macros/get_custom_name/get_custom_alias.sql
+2022-02-11 10:04:41.689066 (Thread-12): 10:04:41  Parsing macros/get_custom_name/get_custom_database.sql
+2022-02-11 10:04:41.690607 (Thread-12): 10:04:41  Parsing macros/etc/datetime.sql
+2022-02-11 10:04:41.699447 (Thread-12): 10:04:41  Parsing macros/etc/statement.sql
+2022-02-11 10:04:41.705108 (Thread-12): 10:04:41  Parsing macros/generic_test_sql/unique.sql
+2022-02-11 10:04:41.706120 (Thread-12): 10:04:41  Parsing macros/generic_test_sql/not_null.sql
+2022-02-11 10:04:41.706919 (Thread-12): 10:04:41  Parsing macros/generic_test_sql/accepted_values.sql
+2022-02-11 10:04:41.708290 (Thread-12): 10:04:41  Parsing macros/generic_test_sql/relationships.sql
+2022-02-11 10:04:41.709166 (Thread-12): 10:04:41  Parsing macros/materializations/configs.sql
+2022-02-11 10:04:41.711470 (Thread-12): 10:04:41  Parsing macros/materializations/hooks.sql
+2022-02-11 10:04:41.715282 (Thread-12): 10:04:41  Parsing macros/materializations/models/table/table.sql
+2022-02-11 10:04:41.722348 (Thread-12): 10:04:41  Parsing macros/materializations/models/table/create_table_as.sql
+2022-02-11 10:04:41.725194 (Thread-12): 10:04:41  Parsing macros/materializations/models/view/create_or_replace_view.sql
+2022-02-11 10:04:41.727813 (Thread-12): 10:04:41  Parsing macros/materializations/models/view/helpers.sql
+2022-02-11 10:04:41.729101 (Thread-12): 10:04:41  Parsing macros/materializations/models/view/create_view_as.sql
+2022-02-11 10:04:41.731371 (Thread-12): 10:04:41  Parsing macros/materializations/models/view/view.sql
+2022-02-11 10:04:41.738159 (Thread-12): 10:04:41  Parsing macros/materializations/models/incremental/incremental.sql
+2022-02-11 10:04:41.747851 (Thread-12): 10:04:41  Parsing macros/materializations/models/incremental/on_schema_change.sql
+2022-02-11 10:04:41.762533 (Thread-12): 10:04:41  Parsing macros/materializations/models/incremental/is_incremental.sql
+2022-02-11 10:04:41.764029 (Thread-12): 10:04:41  Parsing macros/materializations/models/incremental/merge.sql
+2022-02-11 10:04:41.774736 (Thread-12): 10:04:41  Parsing macros/materializations/models/incremental/column_helpers.sql
+2022-02-11 10:04:41.779085 (Thread-12): 10:04:41  Parsing macros/materializations/seeds/helpers.sql
+2022-02-11 10:04:41.794677 (Thread-12): 10:04:41  Parsing macros/materializations/seeds/seed.sql
+2022-02-11 10:04:41.800466 (Thread-12): 10:04:41  Parsing macros/materializations/tests/helpers.sql
+2022-02-11 10:04:41.802191 (Thread-12): 10:04:41  Parsing macros/materializations/tests/test.sql
+2022-02-11 10:04:41.806453 (Thread-12): 10:04:41  Parsing macros/materializations/tests/where_subquery.sql
+2022-02-11 10:04:41.808235 (Thread-12): 10:04:41  Parsing macros/materializations/snapshots/helpers.sql
+2022-02-11 10:04:41.819412 (Thread-12): 10:04:41  Parsing macros/materializations/snapshots/strategies.sql
+2022-02-11 10:04:41.835474 (Thread-12): 10:04:41  Parsing macros/materializations/snapshots/snapshot_merge.sql
+2022-02-11 10:04:41.837079 (Thread-12): 10:04:41  Parsing macros/materializations/snapshots/snapshot.sql
+2022-02-11 10:04:41.848095 (Thread-12): 10:04:41  Parsing tests/generic/builtin.sql
+2022-02-11 10:04:42.044980 (Thread-12): 10:04:42  1699: static parser successfully parsed legacy/customer_orders.sql
+2022-02-11 10:04:42.057086 (Thread-12): 10:04:42  1699: static parser successfully parsed staging/jaffle_shop/stg_jaffle_shop__orders.sql
+2022-02-11 10:04:42.059110 (Thread-12): 10:04:42  1699: static parser successfully parsed staging/jaffle_shop/stg_jaffle_shop__customers.sql
+2022-02-11 10:04:42.061060 (Thread-12): 10:04:42  1699: static parser successfully parsed staging/stripe/stg_stripe__payments.sql
+2022-02-11 10:04:42.063187 (Thread-12): 10:04:42  1699: static parser successfully parsed marts/fct_customer_orders.sql
+2022-02-11 10:04:42.065319 (Thread-12): 10:04:42  1699: static parser successfully parsed marts/int_orders.sql
+2022-02-11 10:04:42.142402 (Thread-12): 10:04:42  [WARNING]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.my_new_project.example
+
+2022-02-11 10:04:42.147914 (Thread-12): 10:04:42  Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f56500fa400>]}
+2022-02-11 10:06:35.426430 (Thread-13): handling status request
+2022-02-11 10:06:35.426831 (Thread-13): 10:06:35  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f56500fbf10>]}
+2022-02-11 10:06:35.427877 (Thread-13): sending response (<Response 17499 bytes [200 OK]>) to 10.0.20.79
+2022-02-11 10:06:35.667514 (Thread-14): handling status request
+2022-02-11 10:06:35.667893 (Thread-14): 10:06:35  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f565f4d3ca0>]}
+2022-02-11 10:06:35.668756 (Thread-14): sending response (<Response 17499 bytes [200 OK]>) to 10.0.44.113
+2022-02-11 10:06:35.770616 (Thread-15): handling ps request
+2022-02-11 10:06:35.771041 (Thread-15): 10:06:35  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f56500faac0>]}
+2022-02-11 10:06:35.771520 (Thread-15): sending response (<Response 105 bytes [200 OK]>) to 10.0.46.184
+2022-02-11 10:06:35.786986 (Thread-16): handling status request
+2022-02-11 10:06:35.787288 (Thread-16): 10:06:35  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f56500fa490>]}
+2022-02-11 10:06:35.788116 (Thread-16): sending response (<Response 17499 bytes [200 OK]>) to 10.0.44.113
+2022-02-11 10:06:37.243484 (Thread-17): handling status request
+2022-02-11 10:06:37.243857 (Thread-17): 10:06:37  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f56500fac70>]}
+2022-02-11 10:06:37.244711 (Thread-17): sending response (<Response 17477 bytes [200 OK]>) to 10.0.44.250
+2022-02-11 10:06:37.256997 (Thread-18): handling list request
+2022-02-11 10:06:37.257263 (Thread-18): 10:06:37  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f56500fa160>]}
+2022-02-11 10:06:37.292307 (Thread-18): 10:06:37  Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f56500fac40>]}
+2022-02-11 10:06:37.292815 (Thread-18): 10:06:37  Found 6 models, 0 tests, 0 snapshots, 0 analyses, 188 macros, 0 operations, 0 seed files, 3 sources, 0 exposures, 0 metrics
+2022-02-11 10:06:37.297145 (Thread-18): 10:06:37  The selection criterion '+1644573996200/__unsaved/Statement' does not match any nodes
+2022-02-11 10:06:37.297399 (Thread-18): 10:06:37  The selection criterion '1.sql+' does not match any nodes
+2022-02-11 10:06:37.297528 (Thread-18): 10:06:37  No nodes selected!
+2022-02-11 10:06:37.299224 (Thread-18): sending response (<Response 2348 bytes [200 OK]>) to 10.0.44.250
+2022-02-11 10:06:37.775647 (Thread-19): handling status request
+2022-02-11 10:06:37.776051 (Thread-19): 10:06:37  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5650105b50>]}
+2022-02-11 10:06:37.776979 (Thread-19): sending response (<Response 17499 bytes [200 OK]>) to 10.0.31.57
+2022-02-11 10:06:39.889215 (Thread-20): handling status request
+2022-02-11 10:06:39.889591 (Thread-20): 10:06:39  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f56500ee1f0>]}
+2022-02-11 10:06:39.890460 (Thread-20): sending response (<Response 17477 bytes [200 OK]>) to 10.0.44.250
+2022-02-11 10:06:39.897506 (Thread-21): handling list request
+2022-02-11 10:06:39.897764 (Thread-21): 10:06:39  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f56500ee460>]}
+2022-02-11 10:06:39.926084 (Thread-21): 10:06:39  Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5650105be0>]}
+2022-02-11 10:06:39.926399 (Thread-21): 10:06:39  Found 6 models, 0 tests, 0 snapshots, 0 analyses, 188 macros, 0 operations, 0 seed files, 3 sources, 0 exposures, 0 metrics
+2022-02-11 10:06:39.927735 (Thread-21): 10:06:39  The selection criterion '+1644573996200/__unsaved/Statement' does not match any nodes
+2022-02-11 10:06:39.927946 (Thread-21): 10:06:39  The selection criterion '1.sql+' does not match any nodes
+2022-02-11 10:06:39.928060 (Thread-21): 10:06:39  No nodes selected!
+2022-02-11 10:06:39.929524 (Thread-21): sending response (<Response 2348 bytes [200 OK]>) to 10.0.44.250
+2022-02-11 10:06:46.224910 (Thread-22): handling status request
+2022-02-11 10:06:46.225284 (Thread-22): 10:06:46  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f565039ebb0>]}
+2022-02-11 10:06:46.226163 (Thread-22): sending response (<Response 17499 bytes [200 OK]>) to 10.0.31.57
+2022-02-11 10:06:46.521661 (Thread-23): handling status request
+2022-02-11 10:06:46.523667 (Thread-23): 10:06:46  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f565039ea90>]}
+2022-02-11 10:06:46.524606 (Thread-23): sending response (<Response 17499 bytes [200 OK]>) to 10.0.43.23
+2022-02-11 10:06:46.557651 (Thread-24): handling cli_args request
+2022-02-11 10:06:46.557966 (Thread-24): 10:06:46  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f565039e400>]}
+2022-02-11 10:06:48.753568 (Thread-24): sending response (<Response 138 bytes [200 OK]>) to 10.0.44.113
+2022-02-11 10:06:48.868833 (MainThread): 10:06:48  Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+2022-02-11 10:06:48.869295 (MainThread): 10:06:48  Partial parsing enabled, no changes found, skipping parsing
+2022-02-11 10:06:48.869838 (MainThread): 10:06:48  [WARNING]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.my_new_project.example
+
+2022-02-11 10:06:48.875196 (MainThread): 10:06:48  Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'df3276e3-6a1a-4a95-9f31-3e6852c6ab6d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f76bda0a9d0>]}
+2022-02-11 10:06:48.907440 (MainThread): 10:06:48  Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'df3276e3-6a1a-4a95-9f31-3e6852c6ab6d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f76be29e3a0>]}
+2022-02-11 10:06:48.907688 (MainThread): 10:06:48  Found 6 models, 0 tests, 0 snapshots, 0 analyses, 188 macros, 0 operations, 0 seed files, 3 sources, 0 exposures, 0 metrics
+2022-02-11 10:06:48.908787 (MainThread): 10:06:48  
+2022-02-11 10:06:48.909065 (MainThread): 10:06:48  Acquiring new bigquery connection "master"
+2022-02-11 10:06:48.910227 (ThreadPoolExecutor-0_0): 10:06:48  Acquiring new bigquery connection "list_dbtmodularity"
+2022-02-11 10:06:48.910373 (ThreadPoolExecutor-0_0): 10:06:48  Opening a new connection, currently in state init
+2022-02-11 10:06:49.087821 (Thread-25): handling poll request
+2022-02-11 10:06:49.088226 (Thread-25): 10:06:49  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f56503882b0>]}
+2022-02-11 10:06:49.089064 (Thread-25): sending response (<Response 3780 bytes [200 OK]>) to 10.0.18.228
+2022-02-11 10:06:50.209639 (ThreadPoolExecutor-1_0): 10:06:50  Acquiring new bigquery connection "list_dbtmodularity_dbt_luisscabral"
+2022-02-11 10:06:50.209924 (ThreadPoolExecutor-1_0): 10:06:50  Opening a new connection, currently in state closed
+2022-02-11 10:06:50.439104 (Thread-26): handling poll request
+2022-02-11 10:06:50.439475 (Thread-26): 10:06:50  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f56503880a0>]}
+2022-02-11 10:06:50.439982 (Thread-26): sending response (<Response 919 bytes [200 OK]>) to 10.0.13.131
+2022-02-11 10:06:50.456147 (MainThread): 10:06:50  Concurrency: 4 threads (target='default')
+2022-02-11 10:06:50.456331 (MainThread): 10:06:50  
+2022-02-11 10:06:50.459167 (Thread-1): 10:06:50  Began running node model.my_new_project.customer_orders
+2022-02-11 10:06:50.459464 (Thread-1): 10:06:50  1 of 6 START view model dbt_luisscabral.customer_orders......................... [RUN]
+2022-02-11 10:06:50.459739 (Thread-1): 10:06:50  Acquiring new bigquery connection "model.my_new_project.customer_orders"
+2022-02-11 10:06:50.459835 (Thread-1): 10:06:50  Began compiling node model.my_new_project.customer_orders
+2022-02-11 10:06:50.459926 (Thread-1): 10:06:50  Compiling model.my_new_project.customer_orders
+2022-02-11 10:06:50.464250 (Thread-2): 10:06:50  Began running node model.my_new_project.stg_jaffle_shop__customers
+2022-02-11 10:06:50.464484 (Thread-2): 10:06:50  2 of 6 START view model dbt_luisscabral.stg_jaffle_shop__customers.............. [RUN]
+2022-02-11 10:06:50.464752 (Thread-2): 10:06:50  Acquiring new bigquery connection "model.my_new_project.stg_jaffle_shop__customers"
+2022-02-11 10:06:50.464840 (Thread-2): 10:06:50  Began compiling node model.my_new_project.stg_jaffle_shop__customers
+2022-02-11 10:06:50.464921 (Thread-2): 10:06:50  Compiling model.my_new_project.stg_jaffle_shop__customers
+2022-02-11 10:06:50.467039 (Thread-2): 10:06:50  Writing injected SQL for node "model.my_new_project.stg_jaffle_shop__customers"
+2022-02-11 10:06:50.464071 (Thread-1): 10:06:50  Writing injected SQL for node "model.my_new_project.customer_orders"
+2022-02-11 10:06:50.467377 (Thread-3): 10:06:50  Began running node model.my_new_project.stg_jaffle_shop__orders
+2022-02-11 10:06:50.467591 (Thread-3): 10:06:50  3 of 6 START view model dbt_luisscabral.stg_jaffle_shop__orders................. [RUN]
+2022-02-11 10:06:50.467836 (Thread-3): 10:06:50  Acquiring new bigquery connection "model.my_new_project.stg_jaffle_shop__orders"
+2022-02-11 10:06:50.467921 (Thread-3): 10:06:50  Began compiling node model.my_new_project.stg_jaffle_shop__orders
+2022-02-11 10:06:50.467998 (Thread-3): 10:06:50  Compiling model.my_new_project.stg_jaffle_shop__orders
+2022-02-11 10:06:50.470102 (Thread-3): 10:06:50  Writing injected SQL for node "model.my_new_project.stg_jaffle_shop__orders"
+2022-02-11 10:06:50.470374 (Thread-4): 10:06:50  Began running node model.my_new_project.stg_stripe__payments
+2022-02-11 10:06:50.470640 (Thread-4): 10:06:50  4 of 6 START view model dbt_luisscabral.stg_stripe__payments.................... [RUN]
+2022-02-11 10:06:50.470999 (Thread-4): 10:06:50  Acquiring new bigquery connection "model.my_new_project.stg_stripe__payments"
+2022-02-11 10:06:50.471119 (Thread-4): 10:06:50  Began compiling node model.my_new_project.stg_stripe__payments
+2022-02-11 10:06:50.471228 (Thread-4): 10:06:50  Compiling model.my_new_project.stg_stripe__payments
+2022-02-11 10:06:50.473495 (Thread-4): 10:06:50  Writing injected SQL for node "model.my_new_project.stg_stripe__payments"
+2022-02-11 10:06:50.514163 (Thread-1): 10:06:50  finished collecting timing info
+2022-02-11 10:06:50.514391 (Thread-1): 10:06:50  Began executing node model.my_new_project.customer_orders
+2022-02-11 10:06:50.519546 (Thread-2): 10:06:50  finished collecting timing info
+2022-02-11 10:06:50.519724 (Thread-2): 10:06:50  Began executing node model.my_new_project.stg_jaffle_shop__customers
+2022-02-11 10:06:50.524764 (Thread-4): 10:06:50  finished collecting timing info
+2022-02-11 10:06:50.524914 (Thread-4): 10:06:50  Began executing node model.my_new_project.stg_stripe__payments
+2022-02-11 10:06:50.540396 (Thread-3): 10:06:50  finished collecting timing info
+2022-02-11 10:06:50.540550 (Thread-3): 10:06:50  Began executing node model.my_new_project.stg_jaffle_shop__orders
+2022-02-11 10:06:50.581425 (Thread-1): 10:06:50  Writing runtime SQL for node "model.my_new_project.customer_orders"
+2022-02-11 10:06:50.583418 (Thread-4): 10:06:50  Writing runtime SQL for node "model.my_new_project.stg_stripe__payments"
+2022-02-11 10:06:50.584288 (Thread-3): 10:06:50  Writing runtime SQL for node "model.my_new_project.stg_jaffle_shop__orders"
+2022-02-11 10:06:50.587683 (Thread-2): 10:06:50  Writing runtime SQL for node "model.my_new_project.stg_jaffle_shop__customers"
+2022-02-11 10:06:50.631497 (Thread-2): 10:06:50  Opening a new connection, currently in state init
+2022-02-11 10:06:50.635994 (Thread-2): 10:06:50  On model.my_new_project.stg_jaffle_shop__customers: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "user", "target_name": "default", "node_id": "model.my_new_project.stg_jaffle_shop__customers"} */
+
+
+  create or replace view `dbtmodularity`.`dbt_luisscabral`.`stg_jaffle_shop__customers`
+  OPTIONS()
+  as with
+
+source as (
+
+    select * from `dbt-tutorial`.`jaffle_shop`.`customers`
+
+),
+
+transformed as (
+
+    select 
+
+        id as customer_id,
+        last_name as surname,
+        first_name as givenname,
+        first_name || ' ' || last_name as full_name
+
+    from source
+
+)
+
+select * from transformed;
+
+
+2022-02-11 10:06:50.638176 (Thread-1): 10:06:50  Opening a new connection, currently in state closed
+2022-02-11 10:06:50.640644 (Thread-4): 10:06:50  Opening a new connection, currently in state init
+2022-02-11 10:06:50.640888 (Thread-3): 10:06:50  Opening a new connection, currently in state init
+2022-02-11 10:06:50.642757 (Thread-1): 10:06:50  On model.my_new_project.customer_orders: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "user", "target_name": "default", "node_id": "model.my_new_project.customer_orders"} */
+
+
+  create or replace view `dbtmodularity`.`dbt_luisscabral`.`customer_orders`
+  OPTIONS()
+  as select 
+    orders.id as order_id,
+    orders.user_id as customer_id,
+    last_name as surname,
+    first_name as givenname,
+    first_order_date,
+    order_count,
+    total_lifetime_value,
+    round(amount/100.0,2) as order_value_dollars,
+    orders.status as order_status,
+    payments.status as payment_status
+from `dbt-tutorial`.`jaffle_shop`.`orders` as orders
+
+join (
+      select 
+        first_name || ' ' || last_name as name, 
+        * 
+      from `dbt-tutorial`.`jaffle_shop`.`customers`
+) customers
+on orders.user_id = customers.id
+
+join (
+
+    select 
+        b.id as customer_id,
+        b.name as full_name,
+        b.last_name as surname,
+        b.first_name as givenname,
+        min(order_date) as first_order_date,
+        min(case when a.status NOT IN ('returned','return_pending') then order_date end) as first_non_returned_order_date,
+        max(case when a.status NOT IN ('returned','return_pending') then order_date end) as most_recent_non_returned_order_date,
+        COALESCE(max(user_order_seq),0) as order_count,
+        COALESCE(count(case when a.status != 'returned' then 1 end),0) as non_returned_order_count,
+        sum(case when a.status NOT IN ('returned','return_pending') then ROUND(c.amount/100.0,2) else 0 end) as total_lifetime_value,
+        sum(case when a.status NOT IN ('returned','return_pending') then ROUND(c.amount/100.0,2) else 0 end)/NULLIF(count(case when a.status NOT IN ('returned','return_pending') then 1 end),0) as avg_non_returned_order_value,
+        array_agg(distinct a.id) as order_ids
+
+    from (
+      select 
+        row_number() over (partition by user_id order by order_date, id) as user_order_seq,
+        *
+      from `dbt-tutorial`.`jaffle_shop`.`orders`
+    ) a
+
+    join ( 
+      select 
+        first_name || ' ' || last_name as name, 
+        * 
+      from `dbt-tutorial`.`jaffle_shop`.`customers`
+    ) b
+    on a.user_id = b.id
+
+    left outer join `dbt-tutorial`.`stripe`.`payment` c
+    on a.id = c.orderid
+
+    where a.status NOT IN ('pending') and c.status != 'fail'
+
+    group by b.id, b.name, b.last_name, b.first_name
+
+) customer_order_history
+on orders.user_id = customer_order_history.customer_id
+
+left outer join `dbt-tutorial`.`stripe`.`payment` payments
+on orders.id = payments.orderid
+
+where payments.status != 'fail';
+
+
+2022-02-11 10:06:50.645299 (Thread-3): 10:06:50  On model.my_new_project.stg_jaffle_shop__orders: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "user", "target_name": "default", "node_id": "model.my_new_project.stg_jaffle_shop__orders"} */
+
+
+  create or replace view `dbtmodularity`.`dbt_luisscabral`.`stg_jaffle_shop__orders`
+  OPTIONS()
+  as with
+
+source as (
+    
+    select * from `dbt-tutorial`.`jaffle_shop`.`orders`
+    
+),
+
+transformed as (
+        
+      select 
+      
+        id as order_id,
+        user_id as customer_id,
+        status as order_status,
+        order_date,
+        
+        case 
+            when order_status not in ('returned','return_pending') 
+            then order_date 
+        end as valid_order_date,
+        
+        row_number() over (
+            partition by user_id 
+            order by order_date, id
+        ) as user_order_seq
+        
+      from source
+    
+)
+
+select * from transformed;
+
+
+2022-02-11 10:06:50.646359 (Thread-4): 10:06:50  On model.my_new_project.stg_stripe__payments: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "user", "target_name": "default", "node_id": "model.my_new_project.stg_stripe__payments"} */
+
+
+  create or replace view `dbtmodularity`.`dbt_luisscabral`.`stg_stripe__payments`
+  OPTIONS()
+  as with
+
+source as (
+
+    select * from `dbt-tutorial`.`stripe`.`payment`
+
+),
+
+transformed as (
+
+    select 
+
+        id as payment_id,
+        orderid as order_id,
+        status as payment_status,
+        round(amount/100.0, 2) as payment_amount
+
+    from source
+
+)
+
+select * from transformed;
+
+
+2022-02-11 10:06:51.601947 (Thread-3): 10:06:51  BigQuery adapter: Retry attempt 1 of 1 after error: BadRequest('Unrecognized name: order_status at [24:18]')
+2022-02-11 10:06:51.615235 (Thread-2): 10:06:51  finished collecting timing info
+2022-02-11 10:06:51.615642 (Thread-2): 10:06:51  Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'df3276e3-6a1a-4a95-9f31-3e6852c6ab6d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f76bc09d970>]}
+2022-02-11 10:06:51.616119 (Thread-2): 10:06:51  2 of 6 OK created view model dbt_luisscabral.stg_jaffle_shop__customers......... [OK in 1.15s]
+2022-02-11 10:06:51.616239 (Thread-2): 10:06:51  Finished running node model.my_new_project.stg_jaffle_shop__customers
+2022-02-11 10:06:51.660327 (Thread-4): 10:06:51  finished collecting timing info
+2022-02-11 10:06:51.660707 (Thread-4): 10:06:51  Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'df3276e3-6a1a-4a95-9f31-3e6852c6ab6d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f76bc140b20>]}
+2022-02-11 10:06:51.661142 (Thread-4): 10:06:51  4 of 6 OK created view model dbt_luisscabral.stg_stripe__payments............... [OK in 1.19s]
+2022-02-11 10:06:51.661252 (Thread-4): 10:06:51  Finished running node model.my_new_project.stg_stripe__payments
+2022-02-11 10:06:51.684309 (Thread-1): 10:06:51  finished collecting timing info
+2022-02-11 10:06:51.684804 (Thread-1): 10:06:51  Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'df3276e3-6a1a-4a95-9f31-3e6852c6ab6d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f76bc0f8ca0>]}
+2022-02-11 10:06:51.685109 (Thread-1): 10:06:51  1 of 6 OK created view model dbt_luisscabral.customer_orders.................... [OK in 1.23s]
+2022-02-11 10:06:51.685212 (Thread-1): 10:06:51  Finished running node model.my_new_project.customer_orders
+2022-02-11 10:06:51.792491 (Thread-27): handling poll request
+2022-02-11 10:06:51.792848 (Thread-27): 10:06:51  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f56503ed5e0>]}
+2022-02-11 10:06:51.794018 (Thread-27): sending response (<Response 29663 bytes [200 OK]>) to 10.0.40.216
+2022-02-11 10:06:53.113178 (Thread-28): handling poll request
+2022-02-11 10:06:53.113547 (Thread-28): 10:06:53  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f56503e5610>]}
+2022-02-11 10:06:53.114037 (Thread-28): sending response (<Response 286 bytes [200 OK]>) to 10.0.11.229
+2022-02-11 10:06:53.164660 (Thread-3): 10:06:53  finished collecting timing info
+2022-02-11 10:06:53.165255 (Thread-3): 10:06:53  Database Error in model stg_jaffle_shop__orders (models/staging/jaffle_shop/stg_jaffle_shop__orders.sql)
+  Unrecognized name: order_status at [24:18]
+  compiled SQL at target/run/my_new_project/models/staging/jaffle_shop/stg_jaffle_shop__orders.sql
+2022-02-11 10:06:53.165512 (Thread-3): 10:06:53  Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'df3276e3-6a1a-4a95-9f31-3e6852c6ab6d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f76bc112cd0>]}
+2022-02-11 10:06:53.165955 (Thread-3): 10:06:53  3 of 6 ERROR creating view model dbt_luisscabral.stg_jaffle_shop__orders........ [ERROR in 2.70s]
+2022-02-11 10:06:53.166110 (Thread-3): 10:06:53  Finished running node model.my_new_project.stg_jaffle_shop__orders
+2022-02-11 10:06:53.167194 (Thread-2): 10:06:53  Began running node model.my_new_project.int_orders
+2022-02-11 10:06:53.167363 (Thread-2): 10:06:53  5 of 6 SKIP relation dbt_luisscabral.int_orders................................. [SKIP]
+2022-02-11 10:06:53.167472 (Thread-2): 10:06:53  Finished running node model.my_new_project.int_orders
+2022-02-11 10:06:53.168450 (Thread-1): 10:06:53  Began running node model.my_new_project.fct_customer_orders
+2022-02-11 10:06:53.168594 (Thread-1): 10:06:53  6 of 6 SKIP relation dbt_luisscabral.fct_customer_orders........................ [SKIP]
+2022-02-11 10:06:53.168687 (Thread-1): 10:06:53  Finished running node model.my_new_project.fct_customer_orders
+2022-02-11 10:06:53.170041 (MainThread): 10:06:53  Acquiring new bigquery connection "master"
+2022-02-11 10:06:53.170385 (MainThread): 10:06:53  
+2022-02-11 10:06:53.170481 (MainThread): 10:06:53  Finished running 6 view models in 4.26s.
+2022-02-11 10:06:53.170562 (MainThread): 10:06:53  Connection 'master' was properly closed.
+2022-02-11 10:06:53.170629 (MainThread): 10:06:53  Connection 'model.my_new_project.customer_orders' was properly closed.
+2022-02-11 10:06:53.170692 (MainThread): 10:06:53  Connection 'model.my_new_project.stg_jaffle_shop__customers' was properly closed.
+2022-02-11 10:06:53.170753 (MainThread): 10:06:53  Connection 'model.my_new_project.stg_jaffle_shop__orders' was properly closed.
+2022-02-11 10:06:53.170812 (MainThread): 10:06:53  Connection 'model.my_new_project.stg_stripe__payments' was properly closed.
+2022-02-11 10:06:53.216943 (MainThread): 10:06:53  
+2022-02-11 10:06:53.217148 (MainThread): 10:06:53  Completed with 1 error and 0 warnings:
+2022-02-11 10:06:53.217239 (MainThread): 10:06:53  
+2022-02-11 10:06:53.217328 (MainThread): 10:06:53  Database Error in model stg_jaffle_shop__orders (models/staging/jaffle_shop/stg_jaffle_shop__orders.sql)
+2022-02-11 10:06:53.217404 (MainThread): 10:06:53    Unrecognized name: order_status at [24:18]
+2022-02-11 10:06:53.217474 (MainThread): 10:06:53    compiled SQL at target/run/my_new_project/models/staging/jaffle_shop/stg_jaffle_shop__orders.sql
+2022-02-11 10:06:53.217559 (MainThread): 10:06:53  
+2022-02-11 10:06:53.217640 (MainThread): 10:06:53  Done. PASS=3 WARN=0 ERROR=1 SKIP=2 TOTAL=6
+2022-02-11 10:06:54.470453 (Thread-29): handling poll request
+2022-02-11 10:06:54.470998 (Thread-29): 10:06:54  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f56500feeb0>]}
+2022-02-11 10:06:54.472804 (Thread-29): sending response (<Response 32942 bytes [200 OK]>) to 10.0.43.23
+2022-02-11 10:06:55.194233 (Thread-30): handling status request
+2022-02-11 10:06:55.194605 (Thread-30): 10:06:55  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f56500fe280>]}
+2022-02-11 10:06:55.195660 (Thread-30): sending response (<Response 17499 bytes [200 OK]>) to 10.0.10.236
+2022-02-11 10:06:55.414794 (Thread-31): handling status request
+2022-02-11 10:06:55.415202 (Thread-31): 10:06:55  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f56500febb0>]}
+2022-02-11 10:06:55.416109 (Thread-31): sending response (<Response 17499 bytes [200 OK]>) to 10.0.10.236
+2022-02-11 10:06:56.050283 (Thread-32): handling status request
+2022-02-11 10:06:56.050676 (Thread-32): 10:06:56  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f56500feb80>]}
+2022-02-11 10:06:56.051806 (Thread-32): sending response (<Response 17477 bytes [200 OK]>) to 10.0.44.250
+2022-02-11 10:06:56.057710 (Thread-33): handling list request
+2022-02-11 10:06:56.058027 (Thread-33): 10:06:56  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f56500fe5e0>]}
+2022-02-11 10:06:56.094842 (Thread-33): 10:06:56  Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f565016b550>]}
+2022-02-11 10:06:56.095276 (Thread-33): 10:06:56  Found 6 models, 0 tests, 0 snapshots, 0 analyses, 188 macros, 0 operations, 0 seed files, 3 sources, 0 exposures, 0 metrics
+2022-02-11 10:06:56.096472 (Thread-33): 10:06:56  The selection criterion '+1644573996200/__unsaved/Statement' does not match any nodes
+2022-02-11 10:06:56.096688 (Thread-33): 10:06:56  The selection criterion '1.sql+' does not match any nodes
+2022-02-11 10:06:56.096803 (Thread-33): 10:06:56  No nodes selected!
+2022-02-11 10:06:56.098422 (Thread-33): sending response (<Response 2348 bytes [200 OK]>) to 10.0.44.250
+2022-02-11 10:07:20.448665 (Thread-34): handling status request
+2022-02-11 10:07:20.451071 (Thread-34): 10:07:20  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f565015bee0>]}
+2022-02-11 10:07:20.451987 (Thread-34): sending response (<Response 17477 bytes [200 OK]>) to 10.0.44.250
+2022-02-11 10:07:20.461363 (Thread-35): handling list request
+2022-02-11 10:07:20.461648 (Thread-35): 10:07:20  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f565015b910>]}
+2022-02-11 10:07:20.488813 (Thread-35): 10:07:20  Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f565016b190>]}
+2022-02-11 10:07:20.512204 (Thread-35): 10:07:20  Found 6 models, 0 tests, 0 snapshots, 0 analyses, 188 macros, 0 operations, 0 seed files, 3 sources, 0 exposures, 0 metrics
+2022-02-11 10:07:20.517458 (Thread-35): sending response (<Response 3328 bytes [200 OK]>) to 10.0.44.250
+2022-02-11 10:07:35.227110 (Thread-36): handling status request
+2022-02-11 10:07:35.227501 (Thread-36): 10:07:35  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f565016e880>]}
+2022-02-11 10:07:35.228433 (Thread-36): sending response (<Response 17499 bytes [200 OK]>) to 10.0.40.216
+2022-02-11 10:07:35.563478 (Thread-37): handling compile_sql request
+2022-02-11 10:07:35.563876 (Thread-37): 10:07:35  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f565016e310>]}
+2022-02-11 10:07:37.741611 (Thread-37): sending response (<Response 138 bytes [200 OK]>) to 10.0.3.5
+2022-02-11 10:07:37.768950 (MainThread): 10:07:37  Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e01c8dbb-33ee-4eb8-a6d7-e7f5e3e0a0a1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1af14c6ee0>]}
+2022-02-11 10:07:37.769499 (MainThread): 10:07:37  Found 6 models, 0 tests, 0 snapshots, 0 analyses, 188 macros, 0 operations, 0 seed files, 3 sources, 0 exposures, 0 metrics
+2022-02-11 10:07:37.770082 (Thread-1): 10:07:37  Acquiring new bigquery connection "rpc.my_new_project.request"
+2022-02-11 10:07:37.770351 (Thread-1): 10:07:37  Began compiling node rpc.my_new_project.request
+2022-02-11 10:07:37.770467 (Thread-1): 10:07:37  Compiling rpc.my_new_project.request
+2022-02-11 10:07:37.772535 (Thread-1): 10:07:37  finished collecting timing info
+2022-02-11 10:07:37.772664 (Thread-1): 10:07:37  Began executing node rpc.my_new_project.request
+2022-02-11 10:07:37.772763 (Thread-1): 10:07:37  finished collecting timing info
+2022-02-11 10:07:38.086004 (Thread-38): handling poll request
+2022-02-11 10:07:38.086448 (Thread-38): 10:07:38  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5650156a90>]}
+2022-02-11 10:07:38.088230 (Thread-38): sending response (<Response 7671 bytes [200 OK]>) to 10.0.43.23
+2022-02-11 10:08:11.192502 (Thread-39): 10:08:11  Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+2022-02-11 10:08:11.194918 (Thread-39): 10:08:11  Partial parsing: updated file: my_new_project://models/staging/jaffle_shop/stg_jaffle_shop__orders.sql
+2022-02-11 10:08:11.199460 (Thread-39): 10:08:11  1699: static parser successfully parsed staging/jaffle_shop/stg_jaffle_shop__orders.sql
+2022-02-11 10:08:11.241198 (Thread-39): 10:08:11  [WARNING]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.my_new_project.example
+
+2022-02-11 10:08:11.246901 (Thread-39): 10:08:11  Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f562c050400>]}
+2022-02-11 10:08:11.843386 (Thread-40): handling status request
+2022-02-11 10:08:11.843846 (Thread-40): 10:08:11  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f56503da730>]}
+2022-02-11 10:08:11.844379 (Thread-40): sending response (<Response 2052 bytes [200 OK]>) to 10.0.5.75
+2022-02-11 10:08:12.055434 (Thread-41): handling status request
+2022-02-11 10:08:12.055817 (Thread-41): 10:08:12  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f562c0a1a30>]}
+2022-02-11 10:08:12.056322 (Thread-41): sending response (<Response 2052 bytes [200 OK]>) to 10.0.13.131
+2022-02-11 10:08:14.492463 (Thread-42): handling status request
+2022-02-11 10:08:14.492881 (Thread-42): 10:08:14  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f562c0a18e0>]}
+2022-02-11 10:08:14.493388 (Thread-42): sending response (<Response 2052 bytes [200 OK]>) to 10.0.46.69
+2022-02-11 10:08:14.665155 (Thread-43): handling status request
+2022-02-11 10:08:14.665553 (Thread-43): 10:08:14  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f562c0a16a0>]}
+2022-02-11 10:08:14.666085 (Thread-43): sending response (<Response 2052 bytes [200 OK]>) to 10.0.31.57
+2022-02-11 10:08:14.862917 (Thread-44): handling cli_args request
+2022-02-11 10:08:14.863417 (Thread-44): 10:08:14  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f56503e5be0>]}
+2022-02-11 10:08:17.115154 (Thread-44): sending response (<Response 138 bytes [200 OK]>) to 10.0.46.69
+2022-02-11 10:08:17.218578 (MainThread): 10:08:17  Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+2022-02-11 10:08:17.219117 (MainThread): 10:08:17  Partial parsing enabled, no changes found, skipping parsing
+2022-02-11 10:08:17.219769 (MainThread): 10:08:17  [WARNING]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.my_new_project.example
+
+2022-02-11 10:08:17.225643 (MainThread): 10:08:17  Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f91b4a7d-ada2-467e-832d-9e2eab3c9c46', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8c0b32ea60>]}
+2022-02-11 10:08:17.253021 (MainThread): 10:08:17  Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f91b4a7d-ada2-467e-832d-9e2eab3c9c46', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8c0b39c400>]}
+2022-02-11 10:08:17.253333 (MainThread): 10:08:17  Found 6 models, 0 tests, 0 snapshots, 0 analyses, 188 macros, 0 operations, 0 seed files, 3 sources, 0 exposures, 0 metrics
+2022-02-11 10:08:17.254591 (MainThread): 10:08:17  
+2022-02-11 10:08:17.255086 (MainThread): 10:08:17  Acquiring new bigquery connection "master"
+2022-02-11 10:08:17.256292 (ThreadPoolExecutor-0_0): 10:08:17  Acquiring new bigquery connection "list_dbtmodularity"
+2022-02-11 10:08:17.256443 (ThreadPoolExecutor-0_0): 10:08:17  Opening a new connection, currently in state init
+2022-02-11 10:08:17.425144 (Thread-45): handling poll request
+2022-02-11 10:08:17.425631 (Thread-45): 10:08:17  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f565f4cb7c0>]}
+2022-02-11 10:08:17.426559 (Thread-45): sending response (<Response 3781 bytes [200 OK]>) to 10.0.5.155
+2022-02-11 10:08:17.589843 (ThreadPoolExecutor-1_0): 10:08:17  Acquiring new bigquery connection "list_dbtmodularity_dbt_luisscabral"
+2022-02-11 10:08:17.590038 (ThreadPoolExecutor-1_0): 10:08:17  Opening a new connection, currently in state closed
+2022-02-11 10:08:17.896214 (MainThread): 10:08:17  Concurrency: 4 threads (target='default')
+2022-02-11 10:08:17.896401 (MainThread): 10:08:17  
+2022-02-11 10:08:17.899096 (Thread-1): 10:08:17  Began running node model.my_new_project.customer_orders
+2022-02-11 10:08:17.899388 (Thread-1): 10:08:17  1 of 6 START view model dbt_luisscabral.customer_orders......................... [RUN]
+2022-02-11 10:08:17.899673 (Thread-1): 10:08:17  Acquiring new bigquery connection "model.my_new_project.customer_orders"
+2022-02-11 10:08:17.899770 (Thread-1): 10:08:17  Began compiling node model.my_new_project.customer_orders
+2022-02-11 10:08:17.899865 (Thread-1): 10:08:17  Compiling model.my_new_project.customer_orders
+2022-02-11 10:08:17.904212 (Thread-2): 10:08:17  Began running node model.my_new_project.stg_jaffle_shop__customers
+2022-02-11 10:08:17.904467 (Thread-2): 10:08:17  2 of 6 START view model dbt_luisscabral.stg_jaffle_shop__customers.............. [RUN]
+2022-02-11 10:08:17.904749 (Thread-2): 10:08:17  Acquiring new bigquery connection "model.my_new_project.stg_jaffle_shop__customers"
+2022-02-11 10:08:17.904854 (Thread-2): 10:08:17  Began compiling node model.my_new_project.stg_jaffle_shop__customers
+2022-02-11 10:08:17.904939 (Thread-2): 10:08:17  Compiling model.my_new_project.stg_jaffle_shop__customers
+2022-02-11 10:08:17.907293 (Thread-2): 10:08:17  Writing injected SQL for node "model.my_new_project.stg_jaffle_shop__customers"
+2022-02-11 10:08:17.903981 (Thread-1): 10:08:17  Writing injected SQL for node "model.my_new_project.customer_orders"
+2022-02-11 10:08:17.907620 (Thread-3): 10:08:17  Began running node model.my_new_project.stg_jaffle_shop__orders
+2022-02-11 10:08:17.907888 (Thread-3): 10:08:17  3 of 6 START view model dbt_luisscabral.stg_jaffle_shop__orders................. [RUN]
+2022-02-11 10:08:17.908173 (Thread-3): 10:08:17  Acquiring new bigquery connection "model.my_new_project.stg_jaffle_shop__orders"
+2022-02-11 10:08:17.908262 (Thread-3): 10:08:17  Began compiling node model.my_new_project.stg_jaffle_shop__orders
+2022-02-11 10:08:17.908343 (Thread-3): 10:08:17  Compiling model.my_new_project.stg_jaffle_shop__orders
+2022-02-11 10:08:17.910477 (Thread-3): 10:08:17  Writing injected SQL for node "model.my_new_project.stg_jaffle_shop__orders"
+2022-02-11 10:08:17.910707 (Thread-4): 10:08:17  Began running node model.my_new_project.stg_stripe__payments
+2022-02-11 10:08:17.910920 (Thread-4): 10:08:17  4 of 6 START view model dbt_luisscabral.stg_stripe__payments.................... [RUN]
+2022-02-11 10:08:17.911182 (Thread-4): 10:08:17  Acquiring new bigquery connection "model.my_new_project.stg_stripe__payments"
+2022-02-11 10:08:17.911274 (Thread-4): 10:08:17  Began compiling node model.my_new_project.stg_stripe__payments
+2022-02-11 10:08:17.911351 (Thread-4): 10:08:17  Compiling model.my_new_project.stg_stripe__payments
+2022-02-11 10:08:17.913365 (Thread-4): 10:08:17  Writing injected SQL for node "model.my_new_project.stg_stripe__payments"
+2022-02-11 10:08:17.932222 (Thread-1): 10:08:17  finished collecting timing info
+2022-02-11 10:08:17.932396 (Thread-1): 10:08:17  Began executing node model.my_new_project.customer_orders
+2022-02-11 10:08:17.937357 (Thread-2): 10:08:17  finished collecting timing info
+2022-02-11 10:08:17.937522 (Thread-2): 10:08:17  Began executing node model.my_new_project.stg_jaffle_shop__customers
+2022-02-11 10:08:17.947717 (Thread-3): 10:08:17  finished collecting timing info
+2022-02-11 10:08:17.947934 (Thread-3): 10:08:17  Began executing node model.my_new_project.stg_jaffle_shop__orders
+2022-02-11 10:08:17.987941 (Thread-1): 10:08:17  Writing runtime SQL for node "model.my_new_project.customer_orders"
+2022-02-11 10:08:17.991618 (Thread-3): 10:08:17  Writing runtime SQL for node "model.my_new_project.stg_jaffle_shop__orders"
+2022-02-11 10:08:17.991930 (Thread-4): 10:08:17  finished collecting timing info
+2022-02-11 10:08:17.992083 (Thread-4): 10:08:17  Began executing node model.my_new_project.stg_stripe__payments
+2022-02-11 10:08:17.994178 (Thread-4): 10:08:17  Writing runtime SQL for node "model.my_new_project.stg_stripe__payments"
+2022-02-11 10:08:17.995765 (Thread-2): 10:08:17  Writing runtime SQL for node "model.my_new_project.stg_jaffle_shop__customers"
+2022-02-11 10:08:18.006052 (Thread-1): 10:08:18  Opening a new connection, currently in state closed
+2022-02-11 10:08:18.010601 (Thread-1): 10:08:18  On model.my_new_project.customer_orders: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "user", "target_name": "default", "node_id": "model.my_new_project.customer_orders"} */
+
+
+  create or replace view `dbtmodularity`.`dbt_luisscabral`.`customer_orders`
+  OPTIONS()
+  as select 
+    orders.id as order_id,
+    orders.user_id as customer_id,
+    last_name as surname,
+    first_name as givenname,
+    first_order_date,
+    order_count,
+    total_lifetime_value,
+    round(amount/100.0,2) as order_value_dollars,
+    orders.status as order_status,
+    payments.status as payment_status
+from `dbt-tutorial`.`jaffle_shop`.`orders` as orders
+
+join (
+      select 
+        first_name || ' ' || last_name as name, 
+        * 
+      from `dbt-tutorial`.`jaffle_shop`.`customers`
+) customers
+on orders.user_id = customers.id
+
+join (
+
+    select 
+        b.id as customer_id,
+        b.name as full_name,
+        b.last_name as surname,
+        b.first_name as givenname,
+        min(order_date) as first_order_date,
+        min(case when a.status NOT IN ('returned','return_pending') then order_date end) as first_non_returned_order_date,
+        max(case when a.status NOT IN ('returned','return_pending') then order_date end) as most_recent_non_returned_order_date,
+        COALESCE(max(user_order_seq),0) as order_count,
+        COALESCE(count(case when a.status != 'returned' then 1 end),0) as non_returned_order_count,
+        sum(case when a.status NOT IN ('returned','return_pending') then ROUND(c.amount/100.0,2) else 0 end) as total_lifetime_value,
+        sum(case when a.status NOT IN ('returned','return_pending') then ROUND(c.amount/100.0,2) else 0 end)/NULLIF(count(case when a.status NOT IN ('returned','return_pending') then 1 end),0) as avg_non_returned_order_value,
+        array_agg(distinct a.id) as order_ids
+
+    from (
+      select 
+        row_number() over (partition by user_id order by order_date, id) as user_order_seq,
+        *
+      from `dbt-tutorial`.`jaffle_shop`.`orders`
+    ) a
+
+    join ( 
+      select 
+        first_name || ' ' || last_name as name, 
+        * 
+      from `dbt-tutorial`.`jaffle_shop`.`customers`
+    ) b
+    on a.user_id = b.id
+
+    left outer join `dbt-tutorial`.`stripe`.`payment` c
+    on a.id = c.orderid
+
+    where a.status NOT IN ('pending') and c.status != 'fail'
+
+    group by b.id, b.name, b.last_name, b.first_name
+
+) customer_order_history
+on orders.user_id = customer_order_history.customer_id
+
+left outer join `dbt-tutorial`.`stripe`.`payment` payments
+on orders.id = payments.orderid
+
+where payments.status != 'fail';
+
+
+2022-02-11 10:08:18.011447 (Thread-2): 10:08:18  Opening a new connection, currently in state init
+2022-02-11 10:08:18.011692 (Thread-4): 10:08:18  Opening a new connection, currently in state init
+2022-02-11 10:08:18.012298 (Thread-3): 10:08:18  Opening a new connection, currently in state init
+2022-02-11 10:08:18.016206 (Thread-4): 10:08:18  On model.my_new_project.stg_stripe__payments: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "user", "target_name": "default", "node_id": "model.my_new_project.stg_stripe__payments"} */
+
+
+  create or replace view `dbtmodularity`.`dbt_luisscabral`.`stg_stripe__payments`
+  OPTIONS()
+  as with
+
+source as (
+
+    select * from `dbt-tutorial`.`stripe`.`payment`
+
+),
+
+transformed as (
+
+    select 
+
+        id as payment_id,
+        orderid as order_id,
+        status as payment_status,
+        round(amount/100.0, 2) as payment_amount
+
+    from source
+
+)
+
+select * from transformed;
+
+
+2022-02-11 10:08:18.018419 (Thread-2): 10:08:18  On model.my_new_project.stg_jaffle_shop__customers: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "user", "target_name": "default", "node_id": "model.my_new_project.stg_jaffle_shop__customers"} */
+
+
+  create or replace view `dbtmodularity`.`dbt_luisscabral`.`stg_jaffle_shop__customers`
+  OPTIONS()
+  as with
+
+source as (
+
+    select * from `dbt-tutorial`.`jaffle_shop`.`customers`
+
+),
+
+transformed as (
+
+    select 
+
+        id as customer_id,
+        last_name as surname,
+        first_name as givenname,
+        first_name || ' ' || last_name as full_name
+
+    from source
+
+)
+
+select * from transformed;
+
+
+2022-02-11 10:08:18.021203 (Thread-3): 10:08:18  On model.my_new_project.stg_jaffle_shop__orders: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "user", "target_name": "default", "node_id": "model.my_new_project.stg_jaffle_shop__orders"} */
+
+
+  create or replace view `dbtmodularity`.`dbt_luisscabral`.`stg_jaffle_shop__orders`
+  OPTIONS()
+  as with
+
+source as (
+    
+    select * from `dbt-tutorial`.`jaffle_shop`.`orders`
+    
+),
+
+transformed as (
+        
+      select 
+      
+        id as order_id,
+        user_id as customer_id,
+        status as order_status,
+        order_date,
+        
+        case 
+            when status not in ('returned','return_pending') 
+            then order_date 
+        end as valid_order_date,
+        
+        row_number() over (
+            partition by user_id 
+            order by order_date, id
+        ) as user_order_seq
+        
+      from source
+    
+)
+
+select * from transformed;
+
+
+2022-02-11 10:08:18.893090 (Thread-4): 10:08:18  finished collecting timing info
+2022-02-11 10:08:18.893745 (Thread-4): 10:08:18  Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f91b4a7d-ada2-467e-832d-9e2eab3c9c46', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8c08176550>]}
+2022-02-11 10:08:18.894413 (Thread-4): 10:08:18  4 of 6 OK created view model dbt_luisscabral.stg_stripe__payments............... [OK in 0.98s]
+2022-02-11 10:08:18.894616 (Thread-4): 10:08:18  Finished running node model.my_new_project.stg_stripe__payments
+2022-02-11 10:08:18.898794 (Thread-46): handling poll request
+2022-02-11 10:08:18.899139 (Thread-46): 10:08:18  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f565006e1c0>]}
+2022-02-11 10:08:18.900218 (Thread-46): sending response (<Response 26231 bytes [200 OK]>) to 10.0.46.69
+2022-02-11 10:08:18.930110 (Thread-3): 10:08:18  finished collecting timing info
+2022-02-11 10:08:18.930546 (Thread-3): 10:08:18  Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f91b4a7d-ada2-467e-832d-9e2eab3c9c46', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8c081df130>]}
+2022-02-11 10:08:18.930921 (Thread-3): 10:08:18  3 of 6 OK created view model dbt_luisscabral.stg_jaffle_shop__orders............ [OK in 1.02s]
+2022-02-11 10:08:18.931043 (Thread-3): 10:08:18  Finished running node model.my_new_project.stg_jaffle_shop__orders
+2022-02-11 10:08:18.931863 (Thread-4): 10:08:18  Began running node model.my_new_project.int_orders
+2022-02-11 10:08:18.932108 (Thread-4): 10:08:18  5 of 6 START view model dbt_luisscabral.int_orders.............................. [RUN]
+2022-02-11 10:08:18.932349 (Thread-4): 10:08:18  Acquiring new bigquery connection "model.my_new_project.int_orders"
+2022-02-11 10:08:18.932442 (Thread-4): 10:08:18  Began compiling node model.my_new_project.int_orders
+2022-02-11 10:08:18.932529 (Thread-4): 10:08:18  Compiling model.my_new_project.int_orders
+2022-02-11 10:08:18.935038 (Thread-4): 10:08:18  Writing injected SQL for node "model.my_new_project.int_orders"
+2022-02-11 10:08:18.952789 (Thread-4): 10:08:18  finished collecting timing info
+2022-02-11 10:08:18.952968 (Thread-4): 10:08:18  Began executing node model.my_new_project.int_orders
+2022-02-11 10:08:18.955318 (Thread-4): 10:08:18  Writing runtime SQL for node "model.my_new_project.int_orders"
+2022-02-11 10:08:18.974693 (Thread-4): 10:08:18  Opening a new connection, currently in state closed
+2022-02-11 10:08:18.979505 (Thread-4): 10:08:18  On model.my_new_project.int_orders: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "user", "target_name": "default", "node_id": "model.my_new_project.int_orders"} */
+
+
+  create or replace view `dbtmodularity`.`dbt_luisscabral`.`int_orders`
+  OPTIONS()
+  as with
+
+orders as (
+
+    select * from `dbtmodularity`.`dbt_luisscabral`.`stg_jaffle_shop__orders`
+
+),
+
+payments as (
+
+    select * from `dbtmodularity`.`dbt_luisscabral`.`stg_stripe__payments`
+    where payment_status != 'fail'
+
+),
+
+order_totals as (
+
+    select
+
+        order_id,
+        payment_status,
+        sum(payment_amount_usd) as order_value_dollars
+
+    from payments
+    group by 1, 2
+
+),
+
+joined as (
+
+    select
+
+        orders.*,
+        order_totals.payment_status,
+        order_totals.order_value_dollars
+
+    from orders 
+    left join order_totals
+        on orders.order_id = order_totals.order_id
+
+)
+
+select * from joined;
+
+
+2022-02-11 10:08:19.036586 (Thread-2): 10:08:19  finished collecting timing info
+2022-02-11 10:08:19.037117 (Thread-2): 10:08:19  Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f91b4a7d-ada2-467e-832d-9e2eab3c9c46', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8c0816b490>]}
+2022-02-11 10:08:19.037507 (Thread-2): 10:08:19  2 of 6 OK created view model dbt_luisscabral.stg_jaffle_shop__customers......... [OK in 1.13s]
+2022-02-11 10:08:19.037656 (Thread-2): 10:08:19  Finished running node model.my_new_project.stg_jaffle_shop__customers
+2022-02-11 10:08:19.145330 (Thread-1): 10:08:19  finished collecting timing info
+2022-02-11 10:08:19.145829 (Thread-1): 10:08:19  Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f91b4a7d-ada2-467e-832d-9e2eab3c9c46', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8c081df5b0>]}
+2022-02-11 10:08:19.146205 (Thread-1): 10:08:19  1 of 6 OK created view model dbt_luisscabral.customer_orders.................... [OK in 1.25s]
+2022-02-11 10:08:19.146328 (Thread-1): 10:08:19  Finished running node model.my_new_project.customer_orders
+2022-02-11 10:08:19.957676 (Thread-4): 10:08:19  BigQuery adapter: Retry attempt 1 of 1 after error: BadRequest('Unrecognized name: payment_amount_usd; Did you mean payment_amount? at [27:13]')
+2022-02-11 10:08:20.237703 (Thread-47): handling poll request
+2022-02-11 10:08:20.238086 (Thread-47): 10:08:20  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f562c033a60>]}
+2022-02-11 10:08:20.238815 (Thread-47): sending response (<Response 11472 bytes [200 OK]>) to 10.0.18.228
+2022-02-11 10:08:21.566752 (Thread-48): handling poll request
+2022-02-11 10:08:21.567157 (Thread-48): 10:08:21  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f562c033c10>]}
+2022-02-11 10:08:21.567645 (Thread-48): sending response (<Response 286 bytes [200 OK]>) to 10.0.31.57
+2022-02-11 10:08:21.829746 (Thread-4): 10:08:21  finished collecting timing info
+2022-02-11 10:08:21.830210 (Thread-4): 10:08:21  Database Error in model int_orders (models/marts/int_orders.sql)
+  Unrecognized name: payment_amount_usd; Did you mean payment_amount? at [27:13]
+  compiled SQL at target/run/my_new_project/models/marts/int_orders.sql
+2022-02-11 10:08:21.830432 (Thread-4): 10:08:21  Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f91b4a7d-ada2-467e-832d-9e2eab3c9c46', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8c0817c880>]}
+2022-02-11 10:08:21.830815 (Thread-4): 10:08:21  5 of 6 ERROR creating view model dbt_luisscabral.int_orders..................... [ERROR in 2.90s]
+2022-02-11 10:08:21.830976 (Thread-4): 10:08:21  Finished running node model.my_new_project.int_orders
+2022-02-11 10:08:21.832066 (Thread-3): 10:08:21  Began running node model.my_new_project.fct_customer_orders
+2022-02-11 10:08:21.832246 (Thread-3): 10:08:21  6 of 6 SKIP relation dbt_luisscabral.fct_customer_orders........................ [SKIP]
+2022-02-11 10:08:21.832353 (Thread-3): 10:08:21  Finished running node model.my_new_project.fct_customer_orders
+2022-02-11 10:08:21.833879 (MainThread): 10:08:21  Acquiring new bigquery connection "master"
+2022-02-11 10:08:21.834326 (MainThread): 10:08:21  
+2022-02-11 10:08:21.834470 (MainThread): 10:08:21  Finished running 6 view models in 4.58s.
+2022-02-11 10:08:21.834593 (MainThread): 10:08:21  Connection 'master' was properly closed.
+2022-02-11 10:08:21.834713 (MainThread): 10:08:21  Connection 'model.my_new_project.customer_orders' was properly closed.
+2022-02-11 10:08:21.834816 (MainThread): 10:08:21  Connection 'model.my_new_project.stg_jaffle_shop__customers' was properly closed.
+2022-02-11 10:08:21.834947 (MainThread): 10:08:21  Connection 'model.my_new_project.stg_jaffle_shop__orders' was properly closed.
+2022-02-11 10:08:21.835051 (MainThread): 10:08:21  Connection 'model.my_new_project.int_orders' was properly closed.
+2022-02-11 10:08:21.893099 (MainThread): 10:08:21  
+2022-02-11 10:08:21.893334 (MainThread): 10:08:21  Completed with 1 error and 0 warnings:
+2022-02-11 10:08:21.893431 (MainThread): 10:08:21  
+2022-02-11 10:08:21.893524 (MainThread): 10:08:21  Database Error in model int_orders (models/marts/int_orders.sql)
+2022-02-11 10:08:21.893602 (MainThread): 10:08:21    Unrecognized name: payment_amount_usd; Did you mean payment_amount? at [27:13]
+2022-02-11 10:08:21.893673 (MainThread): 10:08:21    compiled SQL at target/run/my_new_project/models/marts/int_orders.sql
+2022-02-11 10:08:21.893756 (MainThread): 10:08:21  
+2022-02-11 10:08:21.893840 (MainThread): 10:08:21  Done. PASS=4 WARN=0 ERROR=1 SKIP=1 TOTAL=6
+2022-02-11 10:08:22.920148 (Thread-49): handling poll request
+2022-02-11 10:08:22.920602 (Thread-49): 10:08:22  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f562c068280>]}
+2022-02-11 10:08:22.922095 (Thread-49): sending response (<Response 32458 bytes [200 OK]>) to 10.0.31.57
+2022-02-11 10:08:23.869393 (Thread-50): handling status request
+2022-02-11 10:08:23.869780 (Thread-50): 10:08:23  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f565005bee0>]}
+2022-02-11 10:08:23.870308 (Thread-50): sending response (<Response 2052 bytes [200 OK]>) to 10.0.5.75
+2022-02-11 10:08:23.901052 (Thread-51): handling status request
+2022-02-11 10:08:23.901397 (Thread-51): 10:08:23  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f565005b880>]}
+2022-02-11 10:08:23.901860 (Thread-51): sending response (<Response 2052 bytes [200 OK]>) to 10.0.10.236
+2022-02-11 10:09:00.321978 (Thread-52): 10:09:00  Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+2022-02-11 10:09:00.322661 (Thread-52): 10:09:00  Partial parsing: updated file: my_new_project://models/marts/int_orders.sql
+2022-02-11 10:09:00.329922 (Thread-52): 10:09:00  1699: static parser successfully parsed marts/int_orders.sql
+2022-02-11 10:09:00.379117 (Thread-52): 10:09:00  [WARNING]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.my_new_project.example
+
+2022-02-11 10:09:00.384594 (Thread-52): 10:09:00  Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f562c0a9a90>]}
+2022-02-11 10:09:01.157898 (Thread-53): handling status request
+2022-02-11 10:09:01.158307 (Thread-53): 10:09:01  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f56503d59d0>]}
+2022-02-11 10:09:01.158835 (Thread-53): sending response (<Response 1998 bytes [200 OK]>) to 10.0.40.216
+2022-02-11 10:09:01.237303 (Thread-54): handling status request
+2022-02-11 10:09:01.237795 (Thread-54): 10:09:01  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f55e53b62e0>]}
+2022-02-11 10:09:01.238478 (Thread-54): sending response (<Response 1998 bytes [200 OK]>) to 10.0.31.57
+2022-02-11 10:09:11.258236 (Thread-55): handling status request
+2022-02-11 10:09:11.258619 (Thread-55): 10:09:11  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f55e53b60a0>]}
+2022-02-11 10:09:11.259147 (Thread-55): sending response (<Response 1998 bytes [200 OK]>) to 10.0.18.228
+2022-02-11 10:09:11.532839 (Thread-56): handling status request
+2022-02-11 10:09:11.533211 (Thread-56): 10:09:11  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f562c04ce50>]}
+2022-02-11 10:09:11.533700 (Thread-56): sending response (<Response 1998 bytes [200 OK]>) to 10.0.18.228
+2022-02-11 10:09:11.590977 (Thread-57): handling cli_args request
+2022-02-11 10:09:11.591278 (Thread-57): 10:09:11  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f55e53b9a00>]}
+2022-02-11 10:09:13.774737 (Thread-57): sending response (<Response 138 bytes [200 OK]>) to 10.0.3.5
+2022-02-11 10:09:13.885595 (MainThread): 10:09:13  Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+2022-02-11 10:09:13.886119 (MainThread): 10:09:13  Partial parsing enabled, no changes found, skipping parsing
+2022-02-11 10:09:13.886751 (MainThread): 10:09:13  [WARNING]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.my_new_project.example
+
+2022-02-11 10:09:13.893148 (MainThread): 10:09:13  Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '522091ab-9262-4cb5-8f18-1b2acbbffa00', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1c779df9d0>]}
+2022-02-11 10:09:13.927895 (MainThread): 10:09:13  Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '522091ab-9262-4cb5-8f18-1b2acbbffa00', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1c77a483a0>]}
+2022-02-11 10:09:13.928182 (MainThread): 10:09:13  Found 6 models, 0 tests, 0 snapshots, 0 analyses, 188 macros, 0 operations, 0 seed files, 3 sources, 0 exposures, 0 metrics
+2022-02-11 10:09:13.929368 (MainThread): 10:09:13  
+2022-02-11 10:09:13.929677 (MainThread): 10:09:13  Acquiring new bigquery connection "master"
+2022-02-11 10:09:13.930902 (ThreadPoolExecutor-0_0): 10:09:13  Acquiring new bigquery connection "list_dbtmodularity"
+2022-02-11 10:09:13.931062 (ThreadPoolExecutor-0_0): 10:09:13  Opening a new connection, currently in state init
+2022-02-11 10:09:14.155050 (Thread-58): handling poll request
+2022-02-11 10:09:14.155504 (Thread-58): 10:09:14  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f562c0a9820>]}
+2022-02-11 10:09:14.156382 (Thread-58): sending response (<Response 3781 bytes [200 OK]>) to 10.0.38.212
+2022-02-11 10:09:14.209672 (ThreadPoolExecutor-1_0): 10:09:14  Acquiring new bigquery connection "list_dbtmodularity_dbt_luisscabral"
+2022-02-11 10:09:14.209866 (ThreadPoolExecutor-1_0): 10:09:14  Opening a new connection, currently in state closed
+2022-02-11 10:09:14.398021 (MainThread): 10:09:14  Concurrency: 4 threads (target='default')
+2022-02-11 10:09:14.398189 (MainThread): 10:09:14  
+2022-02-11 10:09:14.400953 (Thread-1): 10:09:14  Began running node model.my_new_project.customer_orders
+2022-02-11 10:09:14.401264 (Thread-1): 10:09:14  1 of 6 START view model dbt_luisscabral.customer_orders......................... [RUN]
+2022-02-11 10:09:14.401537 (Thread-1): 10:09:14  Acquiring new bigquery connection "model.my_new_project.customer_orders"
+2022-02-11 10:09:14.401639 (Thread-1): 10:09:14  Began compiling node model.my_new_project.customer_orders
+2022-02-11 10:09:14.401737 (Thread-1): 10:09:14  Compiling model.my_new_project.customer_orders
+2022-02-11 10:09:14.406025 (Thread-2): 10:09:14  Began running node model.my_new_project.stg_jaffle_shop__customers
+2022-02-11 10:09:14.406283 (Thread-2): 10:09:14  2 of 6 START view model dbt_luisscabral.stg_jaffle_shop__customers.............. [RUN]
+2022-02-11 10:09:14.406553 (Thread-2): 10:09:14  Acquiring new bigquery connection "model.my_new_project.stg_jaffle_shop__customers"
+2022-02-11 10:09:14.406645 (Thread-2): 10:09:14  Began compiling node model.my_new_project.stg_jaffle_shop__customers
+2022-02-11 10:09:14.406745 (Thread-2): 10:09:14  Compiling model.my_new_project.stg_jaffle_shop__customers
+2022-02-11 10:09:14.408920 (Thread-2): 10:09:14  Writing injected SQL for node "model.my_new_project.stg_jaffle_shop__customers"
+2022-02-11 10:09:14.409021 (Thread-1): 10:09:14  Writing injected SQL for node "model.my_new_project.customer_orders"
+2022-02-11 10:09:14.409250 (Thread-3): 10:09:14  Began running node model.my_new_project.stg_jaffle_shop__orders
+2022-02-11 10:09:14.409453 (Thread-3): 10:09:14  3 of 6 START view model dbt_luisscabral.stg_jaffle_shop__orders................. [RUN]
+2022-02-11 10:09:14.409718 (Thread-3): 10:09:14  Acquiring new bigquery connection "model.my_new_project.stg_jaffle_shop__orders"
+2022-02-11 10:09:14.409817 (Thread-3): 10:09:14  Began compiling node model.my_new_project.stg_jaffle_shop__orders
+2022-02-11 10:09:14.409926 (Thread-3): 10:09:14  Compiling model.my_new_project.stg_jaffle_shop__orders
+2022-02-11 10:09:14.412037 (Thread-3): 10:09:14  Writing injected SQL for node "model.my_new_project.stg_jaffle_shop__orders"
+2022-02-11 10:09:14.412317 (Thread-4): 10:09:14  Began running node model.my_new_project.stg_stripe__payments
+2022-02-11 10:09:14.412531 (Thread-4): 10:09:14  4 of 6 START view model dbt_luisscabral.stg_stripe__payments.................... [RUN]
+2022-02-11 10:09:14.412776 (Thread-4): 10:09:14  Acquiring new bigquery connection "model.my_new_project.stg_stripe__payments"
+2022-02-11 10:09:14.412863 (Thread-4): 10:09:14  Began compiling node model.my_new_project.stg_stripe__payments
+2022-02-11 10:09:14.412942 (Thread-4): 10:09:14  Compiling model.my_new_project.stg_stripe__payments
+2022-02-11 10:09:14.414979 (Thread-4): 10:09:14  Writing injected SQL for node "model.my_new_project.stg_stripe__payments"
+2022-02-11 10:09:14.428045 (Thread-2): 10:09:14  finished collecting timing info
+2022-02-11 10:09:14.428192 (Thread-2): 10:09:14  Began executing node model.my_new_project.stg_jaffle_shop__customers
+2022-02-11 10:09:14.433143 (Thread-1): 10:09:14  finished collecting timing info
+2022-02-11 10:09:14.433271 (Thread-1): 10:09:14  Began executing node model.my_new_project.customer_orders
+2022-02-11 10:09:14.448641 (Thread-4): 10:09:14  finished collecting timing info
+2022-02-11 10:09:14.448777 (Thread-4): 10:09:14  Began executing node model.my_new_project.stg_stripe__payments
+2022-02-11 10:09:14.477370 (Thread-1): 10:09:14  Writing runtime SQL for node "model.my_new_project.customer_orders"
+2022-02-11 10:09:14.477797 (Thread-4): 10:09:14  Writing runtime SQL for node "model.my_new_project.stg_stripe__payments"
+2022-02-11 10:09:14.478017 (Thread-3): 10:09:14  finished collecting timing info
+2022-02-11 10:09:14.478158 (Thread-3): 10:09:14  Began executing node model.my_new_project.stg_jaffle_shop__orders
+2022-02-11 10:09:14.481232 (Thread-3): 10:09:14  Writing runtime SQL for node "model.my_new_project.stg_jaffle_shop__orders"
+2022-02-11 10:09:14.483165 (Thread-2): 10:09:14  Writing runtime SQL for node "model.my_new_project.stg_jaffle_shop__customers"
+2022-02-11 10:09:14.499416 (Thread-4): 10:09:14  Opening a new connection, currently in state init
+2022-02-11 10:09:14.499714 (Thread-1): 10:09:14  Opening a new connection, currently in state closed
+2022-02-11 10:09:14.499929 (Thread-3): 10:09:14  Opening a new connection, currently in state init
+2022-02-11 10:09:14.500359 (Thread-2): 10:09:14  Opening a new connection, currently in state init
+2022-02-11 10:09:14.504809 (Thread-2): 10:09:14  On model.my_new_project.stg_jaffle_shop__customers: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "user", "target_name": "default", "node_id": "model.my_new_project.stg_jaffle_shop__customers"} */
+
+
+  create or replace view `dbtmodularity`.`dbt_luisscabral`.`stg_jaffle_shop__customers`
+  OPTIONS()
+  as with
+
+source as (
+
+    select * from `dbt-tutorial`.`jaffle_shop`.`customers`
+
+),
+
+transformed as (
+
+    select 
+
+        id as customer_id,
+        last_name as surname,
+        first_name as givenname,
+        first_name || ' ' || last_name as full_name
+
+    from source
+
+)
+
+select * from transformed;
+
+
+2022-02-11 10:09:14.505884 (Thread-4): 10:09:14  On model.my_new_project.stg_stripe__payments: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "user", "target_name": "default", "node_id": "model.my_new_project.stg_stripe__payments"} */
+
+
+  create or replace view `dbtmodularity`.`dbt_luisscabral`.`stg_stripe__payments`
+  OPTIONS()
+  as with
+
+source as (
+
+    select * from `dbt-tutorial`.`stripe`.`payment`
+
+),
+
+transformed as (
+
+    select 
+
+        id as payment_id,
+        orderid as order_id,
+        status as payment_status,
+        round(amount/100.0, 2) as payment_amount
+
+    from source
+
+)
+
+select * from transformed;
+
+
+2022-02-11 10:09:14.508636 (Thread-3): 10:09:14  On model.my_new_project.stg_jaffle_shop__orders: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "user", "target_name": "default", "node_id": "model.my_new_project.stg_jaffle_shop__orders"} */
+
+
+  create or replace view `dbtmodularity`.`dbt_luisscabral`.`stg_jaffle_shop__orders`
+  OPTIONS()
+  as with
+
+source as (
+    
+    select * from `dbt-tutorial`.`jaffle_shop`.`orders`
+    
+),
+
+transformed as (
+        
+      select 
+      
+        id as order_id,
+        user_id as customer_id,
+        status as order_status,
+        order_date,
+        
+        case 
+            when status not in ('returned','return_pending') 
+            then order_date 
+        end as valid_order_date,
+        
+        row_number() over (
+            partition by user_id 
+            order by order_date, id
+        ) as user_order_seq
+        
+      from source
+    
+)
+
+select * from transformed;
+
+
+2022-02-11 10:09:14.509900 (Thread-1): 10:09:14  On model.my_new_project.customer_orders: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "user", "target_name": "default", "node_id": "model.my_new_project.customer_orders"} */
+
+
+  create or replace view `dbtmodularity`.`dbt_luisscabral`.`customer_orders`
+  OPTIONS()
+  as select 
+    orders.id as order_id,
+    orders.user_id as customer_id,
+    last_name as surname,
+    first_name as givenname,
+    first_order_date,
+    order_count,
+    total_lifetime_value,
+    round(amount/100.0,2) as order_value_dollars,
+    orders.status as order_status,
+    payments.status as payment_status
+from `dbt-tutorial`.`jaffle_shop`.`orders` as orders
+
+join (
+      select 
+        first_name || ' ' || last_name as name, 
+        * 
+      from `dbt-tutorial`.`jaffle_shop`.`customers`
+) customers
+on orders.user_id = customers.id
+
+join (
+
+    select 
+        b.id as customer_id,
+        b.name as full_name,
+        b.last_name as surname,
+        b.first_name as givenname,
+        min(order_date) as first_order_date,
+        min(case when a.status NOT IN ('returned','return_pending') then order_date end) as first_non_returned_order_date,
+        max(case when a.status NOT IN ('returned','return_pending') then order_date end) as most_recent_non_returned_order_date,
+        COALESCE(max(user_order_seq),0) as order_count,
+        COALESCE(count(case when a.status != 'returned' then 1 end),0) as non_returned_order_count,
+        sum(case when a.status NOT IN ('returned','return_pending') then ROUND(c.amount/100.0,2) else 0 end) as total_lifetime_value,
+        sum(case when a.status NOT IN ('returned','return_pending') then ROUND(c.amount/100.0,2) else 0 end)/NULLIF(count(case when a.status NOT IN ('returned','return_pending') then 1 end),0) as avg_non_returned_order_value,
+        array_agg(distinct a.id) as order_ids
+
+    from (
+      select 
+        row_number() over (partition by user_id order by order_date, id) as user_order_seq,
+        *
+      from `dbt-tutorial`.`jaffle_shop`.`orders`
+    ) a
+
+    join ( 
+      select 
+        first_name || ' ' || last_name as name, 
+        * 
+      from `dbt-tutorial`.`jaffle_shop`.`customers`
+    ) b
+    on a.user_id = b.id
+
+    left outer join `dbt-tutorial`.`stripe`.`payment` c
+    on a.id = c.orderid
+
+    where a.status NOT IN ('pending') and c.status != 'fail'
+
+    group by b.id, b.name, b.last_name, b.first_name
+
+) customer_order_history
+on orders.user_id = customer_order_history.customer_id
+
+left outer join `dbt-tutorial`.`stripe`.`payment` payments
+on orders.id = payments.orderid
+
+where payments.status != 'fail';
+
+
+2022-02-11 10:09:15.386954 (Thread-2): 10:09:15  finished collecting timing info
+2022-02-11 10:09:15.387397 (Thread-2): 10:09:15  Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '522091ab-9262-4cb5-8f18-1b2acbbffa00', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1c74090220>]}
+2022-02-11 10:09:15.387742 (Thread-2): 10:09:15  2 of 6 OK created view model dbt_luisscabral.stg_jaffle_shop__customers......... [OK in 0.98s]
+2022-02-11 10:09:15.387860 (Thread-2): 10:09:15  Finished running node model.my_new_project.stg_jaffle_shop__customers
+2022-02-11 10:09:15.436667 (Thread-1): 10:09:15  finished collecting timing info
+2022-02-11 10:09:15.437213 (Thread-1): 10:09:15  Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '522091ab-9262-4cb5-8f18-1b2acbbffa00', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1c7405a070>]}
+2022-02-11 10:09:15.437547 (Thread-1): 10:09:15  1 of 6 OK created view model dbt_luisscabral.customer_orders.................... [OK in 1.04s]
+2022-02-11 10:09:15.437658 (Thread-1): 10:09:15  Finished running node model.my_new_project.customer_orders
+2022-02-11 10:09:15.440431 (Thread-4): 10:09:15  finished collecting timing info
+2022-02-11 10:09:15.440769 (Thread-4): 10:09:15  Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '522091ab-9262-4cb5-8f18-1b2acbbffa00', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1c768c7f40>]}
+2022-02-11 10:09:15.441056 (Thread-4): 10:09:15  4 of 6 OK created view model dbt_luisscabral.stg_stripe__payments............... [OK in 1.03s]
+2022-02-11 10:09:15.441164 (Thread-4): 10:09:15  Finished running node model.my_new_project.stg_stripe__payments
+2022-02-11 10:09:15.482977 (Thread-59): handling poll request
+2022-02-11 10:09:15.483304 (Thread-59): 10:09:15  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f55e53b79a0>]}
+2022-02-11 10:09:15.484386 (Thread-59): sending response (<Response 29882 bytes [200 OK]>) to 10.0.10.236
+2022-02-11 10:09:15.486487 (Thread-3): 10:09:15  finished collecting timing info
+2022-02-11 10:09:15.486881 (Thread-3): 10:09:15  Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '522091ab-9262-4cb5-8f18-1b2acbbffa00', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1c577c3ee0>]}
+2022-02-11 10:09:15.487184 (Thread-3): 10:09:15  3 of 6 OK created view model dbt_luisscabral.stg_jaffle_shop__orders............ [OK in 1.08s]
+2022-02-11 10:09:15.487294 (Thread-3): 10:09:15  Finished running node model.my_new_project.stg_jaffle_shop__orders
+2022-02-11 10:09:15.488189 (Thread-2): 10:09:15  Began running node model.my_new_project.int_orders
+2022-02-11 10:09:15.488406 (Thread-2): 10:09:15  5 of 6 START view model dbt_luisscabral.int_orders.............................. [RUN]
+2022-02-11 10:09:15.488643 (Thread-2): 10:09:15  Acquiring new bigquery connection "model.my_new_project.int_orders"
+2022-02-11 10:09:15.488736 (Thread-2): 10:09:15  Began compiling node model.my_new_project.int_orders
+2022-02-11 10:09:15.488823 (Thread-2): 10:09:15  Compiling model.my_new_project.int_orders
+2022-02-11 10:09:15.491721 (Thread-2): 10:09:15  Writing injected SQL for node "model.my_new_project.int_orders"
+2022-02-11 10:09:15.509637 (Thread-2): 10:09:15  finished collecting timing info
+2022-02-11 10:09:15.509786 (Thread-2): 10:09:15  Began executing node model.my_new_project.int_orders
+2022-02-11 10:09:15.511811 (Thread-2): 10:09:15  Writing runtime SQL for node "model.my_new_project.int_orders"
+2022-02-11 10:09:15.529710 (Thread-2): 10:09:15  Opening a new connection, currently in state closed
+2022-02-11 10:09:15.534014 (Thread-2): 10:09:15  On model.my_new_project.int_orders: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "user", "target_name": "default", "node_id": "model.my_new_project.int_orders"} */
+
+
+  create or replace view `dbtmodularity`.`dbt_luisscabral`.`int_orders`
+  OPTIONS()
+  as with
+
+orders as (
+
+    select * from `dbtmodularity`.`dbt_luisscabral`.`stg_jaffle_shop__orders`
+
+),
+
+payments as (
+
+    select * from `dbtmodularity`.`dbt_luisscabral`.`stg_stripe__payments`
+    where payment_status != 'fail'
+
+),
+
+order_totals as (
+
+    select
+
+        order_id,
+        payment_status,
+        sum(payment_amount) as order_value_dollars
+
+    from payments
+    group by 1, 2
+
+),
+
+joined as (
+
+    select
+
+        orders.*,
+        order_totals.payment_status,
+        order_totals.order_value_dollars
+
+    from orders 
+    left join order_totals
+        on orders.order_id = order_totals.order_id
+
+)
+
+select * from joined;
+
+
+2022-02-11 10:09:16.241465 (Thread-2): 10:09:16  finished collecting timing info
+2022-02-11 10:09:16.241924 (Thread-2): 10:09:16  Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '522091ab-9262-4cb5-8f18-1b2acbbffa00', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1c577dbe80>]}
+2022-02-11 10:09:16.242427 (Thread-2): 10:09:16  5 of 6 OK created view model dbt_luisscabral.int_orders......................... [OK in 0.75s]
+2022-02-11 10:09:16.242550 (Thread-2): 10:09:16  Finished running node model.my_new_project.int_orders
+2022-02-11 10:09:16.243446 (Thread-4): 10:09:16  Began running node model.my_new_project.fct_customer_orders
+2022-02-11 10:09:16.243703 (Thread-4): 10:09:16  6 of 6 START view model dbt_luisscabral.fct_customer_orders..................... [RUN]
+2022-02-11 10:09:16.243948 (Thread-4): 10:09:16  Acquiring new bigquery connection "model.my_new_project.fct_customer_orders"
+2022-02-11 10:09:16.244049 (Thread-4): 10:09:16  Began compiling node model.my_new_project.fct_customer_orders
+2022-02-11 10:09:16.244140 (Thread-4): 10:09:16  Compiling model.my_new_project.fct_customer_orders
+2022-02-11 10:09:16.247084 (Thread-4): 10:09:16  Writing injected SQL for node "model.my_new_project.fct_customer_orders"
+2022-02-11 10:09:16.258940 (Thread-4): 10:09:16  finished collecting timing info
+2022-02-11 10:09:16.259096 (Thread-4): 10:09:16  Began executing node model.my_new_project.fct_customer_orders
+2022-02-11 10:09:16.261202 (Thread-4): 10:09:16  Writing runtime SQL for node "model.my_new_project.fct_customer_orders"
+2022-02-11 10:09:16.272461 (Thread-4): 10:09:16  Opening a new connection, currently in state closed
+2022-02-11 10:09:16.276797 (Thread-4): 10:09:16  On model.my_new_project.fct_customer_orders: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "user", "target_name": "default", "node_id": "model.my_new_project.fct_customer_orders"} */
+
+
+  create or replace view `dbtmodularity`.`dbt_luisscabral`.`fct_customer_orders`
+  OPTIONS()
+  as with
+
+customers as (
+
+    select * from `dbtmodularity`.`dbt_luisscabral`.`stg_jaffle_shop__customers`
+
+),
+
+orders as (
+
+    select * from `dbtmodularity`.`dbt_luisscabral`.`int_orders`
+
+),
+
+final as (
+
+    select
+
+        orders.*,
+
+        customers.surname,
+        customers.givenname,
+
+        -- Customer-level aggregations
+        min(orders.order_date) over(
+            partition by orders.customer_id
+        ) as first_order_date,
+
+        min(orders.valid_order_date) over(
+            partition by orders.customer_id
+        ) as first_non_returned_order_date,
+
+        max(orders.valid_order_date) over(
+            partition by orders.customer_id
+        ) as most_recent_non_returned_order_date,
+
+        count(*) over(
+            partition by orders.customer_id
+        ) as order_count,
+
+        sum(nvl2(orders.valid_order_date, 1, 0)) over(
+            partition by orders.customer_id
+        ) as non_returned_order_count,
+
+        array_agg(distinct orders.order_id) over(
+            partition by orders.customer_id
+        ) as order_ids,
+
+        sum(nvl2(orders.valid_order_date, orders.order_value_dollars, 0)) over(
+            partition by orders.customer_id
+        ) as total_lifetime_value
+
+    from orders
+    inner join customers
+        on orders.customer_id = customers.customer_id
+
+)
+
+select * from final;
+
+
+2022-02-11 10:09:16.809162 (Thread-60): handling poll request
+2022-02-11 10:09:16.809587 (Thread-60): 10:09:16  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f55e53587f0>]}
+2022-02-11 10:09:16.810377 (Thread-60): sending response (<Response 15347 bytes [200 OK]>) to 10.0.5.155
+2022-02-11 10:09:17.129311 (Thread-4): 10:09:17  BigQuery adapter: Retry attempt 1 of 1 after error: BadRequest('Function not found: nvl2 at [46:13]')
+2022-02-11 10:09:17.879734 (Thread-4): 10:09:17  finished collecting timing info
+2022-02-11 10:09:17.880190 (Thread-4): 10:09:17  Database Error in model fct_customer_orders (models/marts/fct_customer_orders.sql)
+  Function not found: nvl2 at [46:13]
+  compiled SQL at target/run/my_new_project/models/marts/fct_customer_orders.sql
+2022-02-11 10:09:17.880388 (Thread-4): 10:09:17  Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '522091ab-9262-4cb5-8f18-1b2acbbffa00', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1c577a5640>]}
+2022-02-11 10:09:17.880884 (Thread-4): 10:09:17  6 of 6 ERROR creating view model dbt_luisscabral.fct_customer_orders............ [ERROR in 1.64s]
+2022-02-11 10:09:17.881007 (Thread-4): 10:09:17  Finished running node model.my_new_project.fct_customer_orders
+2022-02-11 10:09:17.882630 (MainThread): 10:09:17  Acquiring new bigquery connection "master"
+2022-02-11 10:09:17.882998 (MainThread): 10:09:17  
+2022-02-11 10:09:17.883105 (MainThread): 10:09:17  Finished running 6 view models in 3.95s.
+2022-02-11 10:09:17.883232 (MainThread): 10:09:17  Connection 'master' was properly closed.
+2022-02-11 10:09:17.883307 (MainThread): 10:09:17  Connection 'model.my_new_project.customer_orders' was properly closed.
+2022-02-11 10:09:17.883375 (MainThread): 10:09:17  Connection 'model.my_new_project.int_orders' was properly closed.
+2022-02-11 10:09:17.883440 (MainThread): 10:09:17  Connection 'model.my_new_project.stg_jaffle_shop__orders' was properly closed.
+2022-02-11 10:09:17.883504 (MainThread): 10:09:17  Connection 'model.my_new_project.fct_customer_orders' was properly closed.
+2022-02-11 10:09:17.938564 (MainThread): 10:09:17  
+2022-02-11 10:09:17.938771 (MainThread): 10:09:17  Completed with 1 error and 0 warnings:
+2022-02-11 10:09:17.938894 (MainThread): 10:09:17  
+2022-02-11 10:09:17.938995 (MainThread): 10:09:17  Database Error in model fct_customer_orders (models/marts/fct_customer_orders.sql)
+2022-02-11 10:09:17.939078 (MainThread): 10:09:17    Function not found: nvl2 at [46:13]
+2022-02-11 10:09:17.939150 (MainThread): 10:09:17    compiled SQL at target/run/my_new_project/models/marts/fct_customer_orders.sql
+2022-02-11 10:09:17.939236 (MainThread): 10:09:17  
+2022-02-11 10:09:17.939320 (MainThread): 10:09:17  Done. PASS=5 WARN=0 ERROR=1 SKIP=0 TOTAL=6
+2022-02-11 10:09:18.140401 (Thread-61): handling poll request
+2022-02-11 10:09:18.140790 (Thread-61): 10:09:18  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f55e537d610>]}
+2022-02-11 10:09:18.142222 (Thread-61): sending response (<Response 33249 bytes [200 OK]>) to 10.0.31.57
+2022-02-11 10:09:19.155169 (Thread-62): handling status request
+2022-02-11 10:09:19.155552 (Thread-62): 10:09:19  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f55e533d280>]}
+2022-02-11 10:09:19.156079 (Thread-62): sending response (<Response 1998 bytes [200 OK]>) to 10.0.5.155
+2022-02-11 10:09:19.423836 (Thread-63): handling status request
+2022-02-11 10:09:19.424216 (Thread-63): 10:09:19  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f55e533dfd0>]}
+2022-02-11 10:09:19.424714 (Thread-63): sending response (<Response 1998 bytes [200 OK]>) to 10.0.30.21
+2022-02-11 10:14:24.695653 (Thread-64): 10:14:24  Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+2022-02-11 10:14:24.697941 (Thread-64): 10:14:24  Partial parsing: updated file: my_new_project://models/marts/fct_customer_orders.sql
+2022-02-11 10:14:24.702487 (Thread-64): 10:14:24  1699: static parser successfully parsed marts/fct_customer_orders.sql
+2022-02-11 10:14:24.745413 (Thread-64): 10:14:24  [WARNING]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.my_new_project.example
+
+2022-02-11 10:14:24.750771 (Thread-64): 10:14:24  Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f55e529c640>]}
+2022-02-11 10:14:25.202450 (Thread-65): handling status request
+2022-02-11 10:14:25.202828 (Thread-65): 10:14:25  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f562c0a9250>]}
+2022-02-11 10:14:25.225344 (Thread-65): sending response (<Response 2016 bytes [200 OK]>) to 10.0.43.23
+2022-02-11 10:14:25.419106 (Thread-66): handling status request
+2022-02-11 10:14:25.419527 (Thread-66): 10:14:25  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f562c0a9d90>]}
+2022-02-11 10:14:25.420046 (Thread-66): sending response (<Response 2016 bytes [200 OK]>) to 10.0.31.57
+2022-02-11 10:14:40.701516 (Thread-67): 10:14:40  Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+2022-02-11 10:14:40.701932 (Thread-67): 10:14:40  Partial parsing: updated file: my_new_project://models/marts/fct_customer_orders.sql
+2022-02-11 10:14:40.706105 (Thread-67): 10:14:40  1699: static parser successfully parsed marts/fct_customer_orders.sql
+2022-02-11 10:14:40.744029 (Thread-67): 10:14:40  [WARNING]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.my_new_project.example
+
+2022-02-11 10:14:40.749620 (Thread-67): 10:14:40  Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f55e522ba30>]}
+2022-02-11 10:14:41.258047 (Thread-68): handling status request
+2022-02-11 10:14:41.258443 (Thread-68): 10:14:41  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f55e53b80d0>]}
+2022-02-11 10:14:41.258974 (Thread-68): sending response (<Response 2016 bytes [200 OK]>) to 10.0.13.131
+2022-02-11 10:14:41.432281 (Thread-69): handling status request
+2022-02-11 10:14:41.432686 (Thread-69): 10:14:41  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f55e53b8160>]}
+2022-02-11 10:14:41.433192 (Thread-69): sending response (<Response 2016 bytes [200 OK]>) to 10.0.44.113
+2022-02-11 10:14:48.767920 (Thread-70): handling status request
+2022-02-11 10:14:48.768318 (Thread-70): 10:14:48  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f55e537d7c0>]}
+2022-02-11 10:14:48.768849 (Thread-70): sending response (<Response 2016 bytes [200 OK]>) to 10.0.11.229
+2022-02-11 10:14:49.076165 (Thread-71): handling status request
+2022-02-11 10:14:49.076562 (Thread-71): 10:14:49  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f55e537d310>]}
+2022-02-11 10:14:49.077189 (Thread-71): sending response (<Response 2016 bytes [200 OK]>) to 10.0.38.212
+2022-02-11 10:14:49.078294 (Thread-72): handling cli_args request
+2022-02-11 10:14:49.078616 (Thread-72): 10:14:49  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f55e537d730>]}
+2022-02-11 10:14:51.219837 (Thread-72): sending response (<Response 138 bytes [200 OK]>) to 10.0.10.236
+2022-02-11 10:14:51.319341 (MainThread): 10:14:51  Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+2022-02-11 10:14:51.319836 (MainThread): 10:14:51  Partial parsing enabled, no changes found, skipping parsing
+2022-02-11 10:14:51.320430 (MainThread): 10:14:51  [WARNING]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.my_new_project.example
+
+2022-02-11 10:14:51.325962 (MainThread): 10:14:51  Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7cb97608-3b8a-4e69-b425-aaa8547fdd3e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa545a7a8b0>]}
+2022-02-11 10:14:51.353197 (MainThread): 10:14:51  Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7cb97608-3b8a-4e69-b425-aaa8547fdd3e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa545b0cfd0>]}
+2022-02-11 10:14:51.353462 (MainThread): 10:14:51  Found 6 models, 0 tests, 0 snapshots, 0 analyses, 188 macros, 0 operations, 0 seed files, 3 sources, 0 exposures, 0 metrics
+2022-02-11 10:14:51.354646 (MainThread): 10:14:51  
+2022-02-11 10:14:51.354993 (MainThread): 10:14:51  Acquiring new bigquery connection "master"
+2022-02-11 10:14:51.356158 (ThreadPoolExecutor-0_0): 10:14:51  Acquiring new bigquery connection "list_dbtmodularity"
+2022-02-11 10:14:51.356309 (ThreadPoolExecutor-0_0): 10:14:51  Opening a new connection, currently in state init
+2022-02-11 10:14:51.512701 (Thread-73): handling poll request
+2022-02-11 10:14:51.513163 (Thread-73): 10:14:51  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f55e537d490>]}
+2022-02-11 10:14:51.514058 (Thread-73): sending response (<Response 3781 bytes [200 OK]>) to 10.0.5.155
+2022-02-11 10:14:51.680737 (ThreadPoolExecutor-1_0): 10:14:51  Acquiring new bigquery connection "list_dbtmodularity_dbt_luisscabral"
+2022-02-11 10:14:51.680926 (ThreadPoolExecutor-1_0): 10:14:51  Opening a new connection, currently in state closed
+2022-02-11 10:14:51.935637 (MainThread): 10:14:51  Concurrency: 4 threads (target='default')
+2022-02-11 10:14:51.935805 (MainThread): 10:14:51  
+2022-02-11 10:14:51.938486 (Thread-1): 10:14:51  Began running node model.my_new_project.customer_orders
+2022-02-11 10:14:51.938775 (Thread-1): 10:14:51  1 of 6 START view model dbt_luisscabral.customer_orders......................... [RUN]
+2022-02-11 10:14:51.939079 (Thread-1): 10:14:51  Acquiring new bigquery connection "model.my_new_project.customer_orders"
+2022-02-11 10:14:51.939179 (Thread-1): 10:14:51  Began compiling node model.my_new_project.customer_orders
+2022-02-11 10:14:51.939276 (Thread-1): 10:14:51  Compiling model.my_new_project.customer_orders
+2022-02-11 10:14:51.943329 (Thread-1): 10:14:51  Writing injected SQL for node "model.my_new_project.customer_orders"
+2022-02-11 10:14:51.943675 (Thread-2): 10:14:51  Began running node model.my_new_project.stg_jaffle_shop__customers
+2022-02-11 10:14:51.943918 (Thread-2): 10:14:51  2 of 6 START view model dbt_luisscabral.stg_jaffle_shop__customers.............. [RUN]
+2022-02-11 10:14:51.944173 (Thread-2): 10:14:51  Acquiring new bigquery connection "model.my_new_project.stg_jaffle_shop__customers"
+2022-02-11 10:14:51.944257 (Thread-2): 10:14:51  Began compiling node model.my_new_project.stg_jaffle_shop__customers
+2022-02-11 10:14:51.944381 (Thread-2): 10:14:51  Compiling model.my_new_project.stg_jaffle_shop__customers
+2022-02-11 10:14:51.946705 (Thread-2): 10:14:51  Writing injected SQL for node "model.my_new_project.stg_jaffle_shop__customers"
+2022-02-11 10:14:51.947452 (Thread-3): 10:14:51  Began running node model.my_new_project.stg_jaffle_shop__orders
+2022-02-11 10:14:51.947683 (Thread-3): 10:14:51  3 of 6 START view model dbt_luisscabral.stg_jaffle_shop__orders................. [RUN]
+2022-02-11 10:14:51.947934 (Thread-3): 10:14:51  Acquiring new bigquery connection "model.my_new_project.stg_jaffle_shop__orders"
+2022-02-11 10:14:51.948023 (Thread-3): 10:14:51  Began compiling node model.my_new_project.stg_jaffle_shop__orders
+2022-02-11 10:14:51.948106 (Thread-3): 10:14:51  Compiling model.my_new_project.stg_jaffle_shop__orders
+2022-02-11 10:14:51.950277 (Thread-3): 10:14:51  Writing injected SQL for node "model.my_new_project.stg_jaffle_shop__orders"
+2022-02-11 10:14:51.950535 (Thread-4): 10:14:51  Began running node model.my_new_project.stg_stripe__payments
+2022-02-11 10:14:51.950762 (Thread-4): 10:14:51  4 of 6 START view model dbt_luisscabral.stg_stripe__payments.................... [RUN]
+2022-02-11 10:14:51.951051 (Thread-4): 10:14:51  Acquiring new bigquery connection "model.my_new_project.stg_stripe__payments"
+2022-02-11 10:14:51.951140 (Thread-4): 10:14:51  Began compiling node model.my_new_project.stg_stripe__payments
+2022-02-11 10:14:51.951218 (Thread-4): 10:14:51  Compiling model.my_new_project.stg_stripe__payments
+2022-02-11 10:14:51.953252 (Thread-4): 10:14:51  Writing injected SQL for node "model.my_new_project.stg_stripe__payments"
+2022-02-11 10:14:51.962448 (Thread-2): 10:14:51  finished collecting timing info
+2022-02-11 10:14:51.962598 (Thread-2): 10:14:51  Began executing node model.my_new_project.stg_jaffle_shop__customers
+2022-02-11 10:14:51.967795 (Thread-1): 10:14:51  finished collecting timing info
+2022-02-11 10:14:51.967930 (Thread-1): 10:14:51  Began executing node model.my_new_project.customer_orders
+2022-02-11 10:14:51.972951 (Thread-4): 10:14:51  finished collecting timing info
+2022-02-11 10:14:51.973096 (Thread-4): 10:14:51  Began executing node model.my_new_project.stg_stripe__payments
+2022-02-11 10:14:51.999266 (Thread-3): 10:14:51  finished collecting timing info
+2022-02-11 10:14:51.999450 (Thread-3): 10:14:51  Began executing node model.my_new_project.stg_jaffle_shop__orders
+2022-02-11 10:14:52.008594 (Thread-2): 10:14:52  Writing runtime SQL for node "model.my_new_project.stg_jaffle_shop__customers"
+2022-02-11 10:14:52.009313 (Thread-1): 10:14:52  Writing runtime SQL for node "model.my_new_project.customer_orders"
+2022-02-11 10:14:52.011848 (Thread-4): 10:14:52  Writing runtime SQL for node "model.my_new_project.stg_stripe__payments"
+2022-02-11 10:14:52.013196 (Thread-3): 10:14:52  Writing runtime SQL for node "model.my_new_project.stg_jaffle_shop__orders"
+2022-02-11 10:14:52.027739 (Thread-2): 10:14:52  Opening a new connection, currently in state init
+2022-02-11 10:14:52.029342 (Thread-1): 10:14:52  Opening a new connection, currently in state closed
+2022-02-11 10:14:52.029623 (Thread-4): 10:14:52  Opening a new connection, currently in state init
+2022-02-11 10:14:52.029998 (Thread-3): 10:14:52  Opening a new connection, currently in state init
+2022-02-11 10:14:52.032282 (Thread-2): 10:14:52  On model.my_new_project.stg_jaffle_shop__customers: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "user", "target_name": "default", "node_id": "model.my_new_project.stg_jaffle_shop__customers"} */
+
+
+  create or replace view `dbtmodularity`.`dbt_luisscabral`.`stg_jaffle_shop__customers`
+  OPTIONS()
+  as with
+
+source as (
+
+    select * from `dbt-tutorial`.`jaffle_shop`.`customers`
+
+),
+
+transformed as (
+
+    select 
+
+        id as customer_id,
+        last_name as surname,
+        first_name as givenname,
+        first_name || ' ' || last_name as full_name
+
+    from source
+
+)
+
+select * from transformed;
+
+
+2022-02-11 10:14:52.034607 (Thread-4): 10:14:52  On model.my_new_project.stg_stripe__payments: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "user", "target_name": "default", "node_id": "model.my_new_project.stg_stripe__payments"} */
+
+
+  create or replace view `dbtmodularity`.`dbt_luisscabral`.`stg_stripe__payments`
+  OPTIONS()
+  as with
+
+source as (
+
+    select * from `dbt-tutorial`.`stripe`.`payment`
+
+),
+
+transformed as (
+
+    select 
+
+        id as payment_id,
+        orderid as order_id,
+        status as payment_status,
+        round(amount/100.0, 2) as payment_amount
+
+    from source
+
+)
+
+select * from transformed;
+
+
+2022-02-11 10:14:52.038324 (Thread-1): 10:14:52  On model.my_new_project.customer_orders: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "user", "target_name": "default", "node_id": "model.my_new_project.customer_orders"} */
+
+
+  create or replace view `dbtmodularity`.`dbt_luisscabral`.`customer_orders`
+  OPTIONS()
+  as select 
+    orders.id as order_id,
+    orders.user_id as customer_id,
+    last_name as surname,
+    first_name as givenname,
+    first_order_date,
+    order_count,
+    total_lifetime_value,
+    round(amount/100.0,2) as order_value_dollars,
+    orders.status as order_status,
+    payments.status as payment_status
+from `dbt-tutorial`.`jaffle_shop`.`orders` as orders
+
+join (
+      select 
+        first_name || ' ' || last_name as name, 
+        * 
+      from `dbt-tutorial`.`jaffle_shop`.`customers`
+) customers
+on orders.user_id = customers.id
+
+join (
+
+    select 
+        b.id as customer_id,
+        b.name as full_name,
+        b.last_name as surname,
+        b.first_name as givenname,
+        min(order_date) as first_order_date,
+        min(case when a.status NOT IN ('returned','return_pending') then order_date end) as first_non_returned_order_date,
+        max(case when a.status NOT IN ('returned','return_pending') then order_date end) as most_recent_non_returned_order_date,
+        COALESCE(max(user_order_seq),0) as order_count,
+        COALESCE(count(case when a.status != 'returned' then 1 end),0) as non_returned_order_count,
+        sum(case when a.status NOT IN ('returned','return_pending') then ROUND(c.amount/100.0,2) else 0 end) as total_lifetime_value,
+        sum(case when a.status NOT IN ('returned','return_pending') then ROUND(c.amount/100.0,2) else 0 end)/NULLIF(count(case when a.status NOT IN ('returned','return_pending') then 1 end),0) as avg_non_returned_order_value,
+        array_agg(distinct a.id) as order_ids
+
+    from (
+      select 
+        row_number() over (partition by user_id order by order_date, id) as user_order_seq,
+        *
+      from `dbt-tutorial`.`jaffle_shop`.`orders`
+    ) a
+
+    join ( 
+      select 
+        first_name || ' ' || last_name as name, 
+        * 
+      from `dbt-tutorial`.`jaffle_shop`.`customers`
+    ) b
+    on a.user_id = b.id
+
+    left outer join `dbt-tutorial`.`stripe`.`payment` c
+    on a.id = c.orderid
+
+    where a.status NOT IN ('pending') and c.status != 'fail'
+
+    group by b.id, b.name, b.last_name, b.first_name
+
+) customer_order_history
+on orders.user_id = customer_order_history.customer_id
+
+left outer join `dbt-tutorial`.`stripe`.`payment` payments
+on orders.id = payments.orderid
+
+where payments.status != 'fail';
+
+
+2022-02-11 10:14:52.039098 (Thread-3): 10:14:52  On model.my_new_project.stg_jaffle_shop__orders: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "user", "target_name": "default", "node_id": "model.my_new_project.stg_jaffle_shop__orders"} */
+
+
+  create or replace view `dbtmodularity`.`dbt_luisscabral`.`stg_jaffle_shop__orders`
+  OPTIONS()
+  as with
+
+source as (
+    
+    select * from `dbt-tutorial`.`jaffle_shop`.`orders`
+    
+),
+
+transformed as (
+        
+      select 
+      
+        id as order_id,
+        user_id as customer_id,
+        status as order_status,
+        order_date,
+        
+        case 
+            when status not in ('returned','return_pending') 
+            then order_date 
+        end as valid_order_date,
+        
+        row_number() over (
+            partition by user_id 
+            order by order_date, id
+        ) as user_order_seq
+        
+      from source
+    
+)
+
+select * from transformed;
+
+
+2022-02-11 10:14:52.841867 (Thread-74): handling poll request
+2022-02-11 10:14:52.842250 (Thread-74): 10:14:52  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f55e5348190>]}
+2022-02-11 10:14:52.843338 (Thread-74): sending response (<Response 24408 bytes [200 OK]>) to 10.0.18.228
+2022-02-11 10:14:52.906552 (Thread-1): 10:14:52  finished collecting timing info
+2022-02-11 10:14:52.907220 (Thread-1): 10:14:52  Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7cb97608-3b8a-4e69-b425-aaa8547fdd3e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa54414b070>]}
+2022-02-11 10:14:52.907627 (Thread-1): 10:14:52  1 of 6 OK created view model dbt_luisscabral.customer_orders.................... [OK in 0.97s]
+2022-02-11 10:14:52.907759 (Thread-1): 10:14:52  Finished running node model.my_new_project.customer_orders
+2022-02-11 10:14:52.964427 (Thread-3): 10:14:52  finished collecting timing info
+2022-02-11 10:14:52.964871 (Thread-3): 10:14:52  Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7cb97608-3b8a-4e69-b425-aaa8547fdd3e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa5440d2580>]}
+2022-02-11 10:14:52.965197 (Thread-3): 10:14:52  3 of 6 OK created view model dbt_luisscabral.stg_jaffle_shop__orders............ [OK in 1.02s]
+2022-02-11 10:14:52.965307 (Thread-3): 10:14:52  Finished running node model.my_new_project.stg_jaffle_shop__orders
+2022-02-11 10:14:53.038585 (Thread-4): 10:14:53  finished collecting timing info
+2022-02-11 10:14:53.039048 (Thread-4): 10:14:53  Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7cb97608-3b8a-4e69-b425-aaa8547fdd3e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa5440ecee0>]}
+2022-02-11 10:14:53.039379 (Thread-4): 10:14:53  4 of 6 OK created view model dbt_luisscabral.stg_stripe__payments............... [OK in 1.09s]
+2022-02-11 10:14:53.039491 (Thread-4): 10:14:53  Finished running node model.my_new_project.stg_stripe__payments
+2022-02-11 10:14:53.040261 (Thread-1): 10:14:53  Began running node model.my_new_project.int_orders
+2022-02-11 10:14:53.040504 (Thread-1): 10:14:53  5 of 6 START view model dbt_luisscabral.int_orders.............................. [RUN]
+2022-02-11 10:14:53.040740 (Thread-1): 10:14:53  Acquiring new bigquery connection "model.my_new_project.int_orders"
+2022-02-11 10:14:53.040830 (Thread-1): 10:14:53  Began compiling node model.my_new_project.int_orders
+2022-02-11 10:14:53.040918 (Thread-1): 10:14:53  Compiling model.my_new_project.int_orders
+2022-02-11 10:14:53.043452 (Thread-1): 10:14:53  Writing injected SQL for node "model.my_new_project.int_orders"
+2022-02-11 10:14:53.052350 (Thread-2): 10:14:53  finished collecting timing info
+2022-02-11 10:14:53.052708 (Thread-2): 10:14:53  Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7cb97608-3b8a-4e69-b425-aaa8547fdd3e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa54414b0d0>]}
+2022-02-11 10:14:53.053017 (Thread-2): 10:14:53  2 of 6 OK created view model dbt_luisscabral.stg_jaffle_shop__customers......... [OK in 1.11s]
+2022-02-11 10:14:53.053129 (Thread-2): 10:14:53  Finished running node model.my_new_project.stg_jaffle_shop__customers
+2022-02-11 10:14:53.059732 (Thread-1): 10:14:53  finished collecting timing info
+2022-02-11 10:14:53.059881 (Thread-1): 10:14:53  Began executing node model.my_new_project.int_orders
+2022-02-11 10:14:53.062086 (Thread-1): 10:14:53  Writing runtime SQL for node "model.my_new_project.int_orders"
+2022-02-11 10:14:53.085753 (Thread-1): 10:14:53  Opening a new connection, currently in state closed
+2022-02-11 10:14:53.090165 (Thread-1): 10:14:53  On model.my_new_project.int_orders: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "user", "target_name": "default", "node_id": "model.my_new_project.int_orders"} */
+
+
+  create or replace view `dbtmodularity`.`dbt_luisscabral`.`int_orders`
+  OPTIONS()
+  as with
+
+orders as (
+
+    select * from `dbtmodularity`.`dbt_luisscabral`.`stg_jaffle_shop__orders`
+
+),
+
+payments as (
+
+    select * from `dbtmodularity`.`dbt_luisscabral`.`stg_stripe__payments`
+    where payment_status != 'fail'
+
+),
+
+order_totals as (
+
+    select
+
+        order_id,
+        payment_status,
+        sum(payment_amount) as order_value_dollars
+
+    from payments
+    group by 1, 2
+
+),
+
+joined as (
+
+    select
+
+        orders.*,
+        order_totals.payment_status,
+        order_totals.order_value_dollars
+
+    from orders 
+    left join order_totals
+        on orders.order_id = order_totals.order_id
+
+)
+
+select * from joined;
+
+
+2022-02-11 10:14:54.068915 (Thread-1): 10:14:54  finished collecting timing info
+2022-02-11 10:14:54.069358 (Thread-1): 10:14:54  Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7cb97608-3b8a-4e69-b425-aaa8547fdd3e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa5441245b0>]}
+2022-02-11 10:14:54.069685 (Thread-1): 10:14:54  5 of 6 OK created view model dbt_luisscabral.int_orders......................... [OK in 1.03s]
+2022-02-11 10:14:54.069798 (Thread-1): 10:14:54  Finished running node model.my_new_project.int_orders
+2022-02-11 10:14:54.071003 (Thread-4): 10:14:54  Began running node model.my_new_project.fct_customer_orders
+2022-02-11 10:14:54.071253 (Thread-4): 10:14:54  6 of 6 START view model dbt_luisscabral.fct_customer_orders..................... [RUN]
+2022-02-11 10:14:54.071487 (Thread-4): 10:14:54  Acquiring new bigquery connection "model.my_new_project.fct_customer_orders"
+2022-02-11 10:14:54.071576 (Thread-4): 10:14:54  Began compiling node model.my_new_project.fct_customer_orders
+2022-02-11 10:14:54.071663 (Thread-4): 10:14:54  Compiling model.my_new_project.fct_customer_orders
+2022-02-11 10:14:54.074452 (Thread-4): 10:14:54  Writing injected SQL for node "model.my_new_project.fct_customer_orders"
+2022-02-11 10:14:54.091591 (Thread-4): 10:14:54  finished collecting timing info
+2022-02-11 10:14:54.091830 (Thread-4): 10:14:54  Began executing node model.my_new_project.fct_customer_orders
+2022-02-11 10:14:54.095118 (Thread-4): 10:14:54  Writing runtime SQL for node "model.my_new_project.fct_customer_orders"
+2022-02-11 10:14:54.110411 (Thread-4): 10:14:54  Opening a new connection, currently in state closed
+2022-02-11 10:14:54.115064 (Thread-4): 10:14:54  On model.my_new_project.fct_customer_orders: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "user", "target_name": "default", "node_id": "model.my_new_project.fct_customer_orders"} */
+
+
+  create or replace view `dbtmodularity`.`dbt_luisscabral`.`fct_customer_orders`
+  OPTIONS()
+  as with
+
+customers as (
+
+    select * from `dbtmodularity`.`dbt_luisscabral`.`stg_jaffle_shop__customers`
+
+),
+
+orders as (
+
+    select * from `dbtmodularity`.`dbt_luisscabral`.`int_orders`
+
+),
+
+final as (
+
+    select
+
+        orders.*,
+
+        customers.surname,
+        customers.givenname,
+
+        -- Customer-level aggregations
+        min(orders.order_date) over(
+            partition by orders.customer_id
+        ) as first_order_date,
+
+        min(orders.valid_order_date) over(
+            partition by orders.customer_id
+        ) as first_non_returned_order_date,
+
+        max(orders.valid_order_date) over(
+            partition by orders.customer_id
+        ) as most_recent_non_returned_order_date,
+
+        count(*) over(
+            partition by orders.customer_id
+        ) as order_count,
+
+        sum(case when orders.valid_order_date is not null
+                then 1
+                else 0
+                end)) over(
+            partition by orders.customer_id
+        ) as non_returned_order_count,
+
+        array_agg(distinct orders.order_id) over(
+            partition by orders.customer_id
+        ) as order_ids,
+
+        sum(case when orders.valid_order_date is not null
+                then orders.order_value_dollars
+                else 0
+                end)) over(
+            partition by orders.customer_id
+        ) as total_lifetime_value
+
+    from orders
+    inner join customers
+        on orders.customer_id = customers.customer_id
+
+)
+
+select * from final;
+
+
+2022-02-11 10:14:54.142101 (Thread-75): handling poll request
+2022-02-11 10:14:54.142461 (Thread-75): 10:14:54  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f55e522c3a0>]}
+2022-02-11 10:14:54.143444 (Thread-75): sending response (<Response 20981 bytes [200 OK]>) to 10.0.3.5
+2022-02-11 10:14:54.441848 (Thread-4): 10:14:54  BigQuery adapter: Retry attempt 1 of 1 after error: BadRequest('Syntax error: OVER keyword must follow a function call at [49:23]')
+2022-02-11 10:14:55.470092 (Thread-76): handling poll request
+2022-02-11 10:14:55.470465 (Thread-76): 10:14:55  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f55e522c9d0>]}
+2022-02-11 10:14:55.471009 (Thread-76): sending response (<Response 713 bytes [200 OK]>) to 10.0.20.79
+2022-02-11 10:14:55.476897 (Thread-4): 10:14:55  finished collecting timing info
+2022-02-11 10:14:55.477347 (Thread-4): 10:14:55  Database Error in model fct_customer_orders (models/marts/fct_customer_orders.sql)
+  Syntax error: OVER keyword must follow a function call at [49:23]
+  compiled SQL at target/run/my_new_project/models/marts/fct_customer_orders.sql
+2022-02-11 10:14:55.477543 (Thread-4): 10:14:55  Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '7cb97608-3b8a-4e69-b425-aaa8547fdd3e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa544080220>]}
+2022-02-11 10:14:55.477870 (Thread-4): 10:14:55  6 of 6 ERROR creating view model dbt_luisscabral.fct_customer_orders............ [ERROR in 1.41s]
+2022-02-11 10:14:55.477982 (Thread-4): 10:14:55  Finished running node model.my_new_project.fct_customer_orders
+2022-02-11 10:14:55.479678 (MainThread): 10:14:55  Acquiring new bigquery connection "master"
+2022-02-11 10:14:55.479980 (MainThread): 10:14:55  
+2022-02-11 10:14:55.480076 (MainThread): 10:14:55  Finished running 6 view models in 4.13s.
+2022-02-11 10:14:55.480156 (MainThread): 10:14:55  Connection 'master' was properly closed.
+2022-02-11 10:14:55.480223 (MainThread): 10:14:55  Connection 'model.my_new_project.int_orders' was properly closed.
+2022-02-11 10:14:55.480286 (MainThread): 10:14:55  Connection 'model.my_new_project.stg_jaffle_shop__customers' was properly closed.
+2022-02-11 10:14:55.480346 (MainThread): 10:14:55  Connection 'model.my_new_project.stg_jaffle_shop__orders' was properly closed.
+2022-02-11 10:14:55.480407 (MainThread): 10:14:55  Connection 'model.my_new_project.fct_customer_orders' was properly closed.
+2022-02-11 10:14:55.532504 (MainThread): 10:14:55  
+2022-02-11 10:14:55.532675 (MainThread): 10:14:55  Completed with 1 error and 0 warnings:
+2022-02-11 10:14:55.532766 (MainThread): 10:14:55  
+2022-02-11 10:14:55.532857 (MainThread): 10:14:55  Database Error in model fct_customer_orders (models/marts/fct_customer_orders.sql)
+2022-02-11 10:14:55.532934 (MainThread): 10:14:55    Syntax error: OVER keyword must follow a function call at [49:23]
+2022-02-11 10:14:55.533002 (MainThread): 10:14:55    compiled SQL at target/run/my_new_project/models/marts/fct_customer_orders.sql
+2022-02-11 10:14:55.533086 (MainThread): 10:14:55  
+2022-02-11 10:14:55.533168 (MainThread): 10:14:55  Done. PASS=5 WARN=0 ERROR=1 SKIP=0 TOTAL=6
+2022-02-11 10:14:56.796485 (Thread-77): handling poll request
+2022-02-11 10:14:56.796879 (Thread-77): 10:14:56  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f55e52148e0>]}
+2022-02-11 10:14:56.798361 (Thread-77): sending response (<Response 33299 bytes [200 OK]>) to 10.0.5.75
+2022-02-11 10:14:57.511997 (Thread-78): handling status request
+2022-02-11 10:14:57.512366 (Thread-78): 10:14:57  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f55e53b6b80>]}
+2022-02-11 10:14:57.512893 (Thread-78): sending response (<Response 2016 bytes [200 OK]>) to 10.0.31.57
+2022-02-11 10:14:57.524492 (Thread-79): handling status request
+2022-02-11 10:14:57.524760 (Thread-79): 10:14:57  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f55e536ee50>]}
+2022-02-11 10:14:57.525149 (Thread-79): sending response (<Response 2016 bytes [200 OK]>) to 10.0.3.5
+2022-02-11 10:15:25.049061 (Thread-80): 10:15:25  Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+2022-02-11 10:15:25.049521 (Thread-80): 10:15:25  Partial parsing: updated file: my_new_project://models/marts/fct_customer_orders.sql
+2022-02-11 10:15:25.054045 (Thread-80): 10:15:25  1699: static parser successfully parsed marts/fct_customer_orders.sql
+2022-02-11 10:15:25.099983 (Thread-80): 10:15:25  [WARNING]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.my_new_project.example
+
+2022-02-11 10:15:25.105827 (Thread-80): 10:15:25  Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f55e51aea60>]}
+2022-02-11 10:15:25.568668 (Thread-81): handling status request
+2022-02-11 10:15:25.569046 (Thread-81): 10:15:25  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f55e519ba30>]}
+2022-02-11 10:15:25.569552 (Thread-81): sending response (<Response 2016 bytes [200 OK]>) to 10.0.5.75
+2022-02-11 10:15:25.738885 (Thread-82): handling status request
+2022-02-11 10:15:25.739282 (Thread-82): 10:15:25  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f55e5291910>]}
+2022-02-11 10:15:25.739773 (Thread-82): sending response (<Response 2016 bytes [200 OK]>) to 10.0.5.155
+2022-02-11 10:15:27.255561 (Thread-83): handling status request
+2022-02-11 10:15:27.255992 (Thread-83): 10:15:27  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f55e51b1670>]}
+2022-02-11 10:15:27.256494 (Thread-83): sending response (<Response 2016 bytes [200 OK]>) to 10.0.18.228
+2022-02-11 10:15:27.481827 (Thread-84): handling status request
+2022-02-11 10:15:27.482259 (Thread-84): 10:15:27  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f55e5345a60>]}
+2022-02-11 10:15:27.482758 (Thread-84): sending response (<Response 2016 bytes [200 OK]>) to 10.0.19.158
+2022-02-11 10:15:27.575252 (Thread-85): handling cli_args request
+2022-02-11 10:15:27.575602 (Thread-85): 10:15:27  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f55e53f6f70>]}
+2022-02-11 10:15:29.731062 (Thread-85): sending response (<Response 138 bytes [200 OK]>) to 10.0.18.228
+2022-02-11 10:15:29.842594 (MainThread): 10:15:29  Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+2022-02-11 10:15:29.843133 (MainThread): 10:15:29  Partial parsing enabled, no changes found, skipping parsing
+2022-02-11 10:15:29.843712 (MainThread): 10:15:29  [WARNING]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.my_new_project.example
+
+2022-02-11 10:15:29.849216 (MainThread): 10:15:29  Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0727d2a0-31a5-4bef-b78e-93098fd73104', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fde84edd940>]}
+2022-02-11 10:15:29.876211 (MainThread): 10:15:29  Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0727d2a0-31a5-4bef-b78e-93098fd73104', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fde84f3d370>]}
+2022-02-11 10:15:29.876472 (MainThread): 10:15:29  Found 6 models, 0 tests, 0 snapshots, 0 analyses, 188 macros, 0 operations, 0 seed files, 3 sources, 0 exposures, 0 metrics
+2022-02-11 10:15:29.877657 (MainThread): 10:15:29  
+2022-02-11 10:15:29.877958 (MainThread): 10:15:29  Acquiring new bigquery connection "master"
+2022-02-11 10:15:29.879151 (ThreadPoolExecutor-0_0): 10:15:29  Acquiring new bigquery connection "list_dbtmodularity"
+2022-02-11 10:15:29.879304 (ThreadPoolExecutor-0_0): 10:15:29  Opening a new connection, currently in state init
+2022-02-11 10:15:30.053017 (Thread-86): handling poll request
+2022-02-11 10:15:30.053488 (Thread-86): 10:15:30  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f55e51aedc0>]}
+2022-02-11 10:15:30.054461 (Thread-86): sending response (<Response 3781 bytes [200 OK]>) to 10.0.20.79
+2022-02-11 10:15:30.197280 (ThreadPoolExecutor-1_0): 10:15:30  Acquiring new bigquery connection "list_dbtmodularity_dbt_luisscabral"
+2022-02-11 10:15:30.197453 (ThreadPoolExecutor-1_0): 10:15:30  Opening a new connection, currently in state closed
+2022-02-11 10:15:30.483473 (MainThread): 10:15:30  Concurrency: 4 threads (target='default')
+2022-02-11 10:15:30.483647 (MainThread): 10:15:30  
+2022-02-11 10:15:30.486543 (Thread-1): 10:15:30  Began running node model.my_new_project.customer_orders
+2022-02-11 10:15:30.486849 (Thread-1): 10:15:30  1 of 6 START view model dbt_luisscabral.customer_orders......................... [RUN]
+2022-02-11 10:15:30.487165 (Thread-1): 10:15:30  Acquiring new bigquery connection "model.my_new_project.customer_orders"
+2022-02-11 10:15:30.487262 (Thread-1): 10:15:30  Began compiling node model.my_new_project.customer_orders
+2022-02-11 10:15:30.487357 (Thread-1): 10:15:30  Compiling model.my_new_project.customer_orders
+2022-02-11 10:15:30.491686 (Thread-2): 10:15:30  Began running node model.my_new_project.stg_jaffle_shop__customers
+2022-02-11 10:15:30.492026 (Thread-2): 10:15:30  2 of 6 START view model dbt_luisscabral.stg_jaffle_shop__customers.............. [RUN]
+2022-02-11 10:15:30.492426 (Thread-2): 10:15:30  Acquiring new bigquery connection "model.my_new_project.stg_jaffle_shop__customers"
+2022-02-11 10:15:30.492569 (Thread-2): 10:15:30  Began compiling node model.my_new_project.stg_jaffle_shop__customers
+2022-02-11 10:15:30.492711 (Thread-2): 10:15:30  Compiling model.my_new_project.stg_jaffle_shop__customers
+2022-02-11 10:15:30.496032 (Thread-2): 10:15:30  Writing injected SQL for node "model.my_new_project.stg_jaffle_shop__customers"
+2022-02-11 10:15:30.496310 (Thread-3): 10:15:30  Began running node model.my_new_project.stg_jaffle_shop__orders
+2022-02-11 10:15:30.496530 (Thread-3): 10:15:30  3 of 6 START view model dbt_luisscabral.stg_jaffle_shop__orders................. [RUN]
+2022-02-11 10:15:30.496803 (Thread-3): 10:15:30  Acquiring new bigquery connection "model.my_new_project.stg_jaffle_shop__orders"
+2022-02-11 10:15:30.496893 (Thread-3): 10:15:30  Began compiling node model.my_new_project.stg_jaffle_shop__orders
+2022-02-11 10:15:30.496985 (Thread-3): 10:15:30  Compiling model.my_new_project.stg_jaffle_shop__orders
+2022-02-11 10:15:30.499329 (Thread-3): 10:15:30  Writing injected SQL for node "model.my_new_project.stg_jaffle_shop__orders"
+2022-02-11 10:15:30.499593 (Thread-4): 10:15:30  Began running node model.my_new_project.stg_stripe__payments
+2022-02-11 10:15:30.499811 (Thread-4): 10:15:30  4 of 6 START view model dbt_luisscabral.stg_stripe__payments.................... [RUN]
+2022-02-11 10:15:30.500064 (Thread-4): 10:15:30  Acquiring new bigquery connection "model.my_new_project.stg_stripe__payments"
+2022-02-11 10:15:30.500152 (Thread-4): 10:15:30  Began compiling node model.my_new_project.stg_stripe__payments
+2022-02-11 10:15:30.500233 (Thread-4): 10:15:30  Compiling model.my_new_project.stg_stripe__payments
+2022-02-11 10:15:30.502350 (Thread-4): 10:15:30  Writing injected SQL for node "model.my_new_project.stg_stripe__payments"
+2022-02-11 10:15:30.503001 (Thread-1): 10:15:30  Writing injected SQL for node "model.my_new_project.customer_orders"
+2022-02-11 10:15:30.518985 (Thread-3): 10:15:30  finished collecting timing info
+2022-02-11 10:15:30.519148 (Thread-3): 10:15:30  Began executing node model.my_new_project.stg_jaffle_shop__orders
+2022-02-11 10:15:30.524146 (Thread-2): 10:15:30  finished collecting timing info
+2022-02-11 10:15:30.524365 (Thread-2): 10:15:30  Began executing node model.my_new_project.stg_jaffle_shop__customers
+2022-02-11 10:15:30.529191 (Thread-4): 10:15:30  finished collecting timing info
+2022-02-11 10:15:30.529333 (Thread-4): 10:15:30  Began executing node model.my_new_project.stg_stripe__payments
+2022-02-11 10:15:30.575799 (Thread-4): 10:15:30  Writing runtime SQL for node "model.my_new_project.stg_stripe__payments"
+2022-02-11 10:15:30.578115 (Thread-2): 10:15:30  Writing runtime SQL for node "model.my_new_project.stg_jaffle_shop__customers"
+2022-02-11 10:15:30.583581 (Thread-1): 10:15:30  finished collecting timing info
+2022-02-11 10:15:30.583756 (Thread-1): 10:15:30  Began executing node model.my_new_project.customer_orders
+2022-02-11 10:15:30.585999 (Thread-1): 10:15:30  Writing runtime SQL for node "model.my_new_project.customer_orders"
+2022-02-11 10:15:30.587036 (Thread-3): 10:15:30  Writing runtime SQL for node "model.my_new_project.stg_jaffle_shop__orders"
+2022-02-11 10:15:30.598566 (Thread-2): 10:15:30  Opening a new connection, currently in state init
+2022-02-11 10:15:30.602220 (Thread-4): 10:15:30  Opening a new connection, currently in state init
+2022-02-11 10:15:30.603554 (Thread-3): 10:15:30  Opening a new connection, currently in state init
+2022-02-11 10:15:30.603806 (Thread-1): 10:15:30  Opening a new connection, currently in state closed
+2022-02-11 10:15:30.606280 (Thread-2): 10:15:30  On model.my_new_project.stg_jaffle_shop__customers: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "user", "target_name": "default", "node_id": "model.my_new_project.stg_jaffle_shop__customers"} */
+
+
+  create or replace view `dbtmodularity`.`dbt_luisscabral`.`stg_jaffle_shop__customers`
+  OPTIONS()
+  as with
+
+source as (
+
+    select * from `dbt-tutorial`.`jaffle_shop`.`customers`
+
+),
+
+transformed as (
+
+    select 
+
+        id as customer_id,
+        last_name as surname,
+        first_name as givenname,
+        first_name || ' ' || last_name as full_name
+
+    from source
+
+)
+
+select * from transformed;
+
+
+2022-02-11 10:15:30.606777 (Thread-4): 10:15:30  On model.my_new_project.stg_stripe__payments: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "user", "target_name": "default", "node_id": "model.my_new_project.stg_stripe__payments"} */
+
+
+  create or replace view `dbtmodularity`.`dbt_luisscabral`.`stg_stripe__payments`
+  OPTIONS()
+  as with
+
+source as (
+
+    select * from `dbt-tutorial`.`stripe`.`payment`
+
+),
+
+transformed as (
+
+    select 
+
+        id as payment_id,
+        orderid as order_id,
+        status as payment_status,
+        round(amount/100.0, 2) as payment_amount
+
+    from source
+
+)
+
+select * from transformed;
+
+
+2022-02-11 10:15:30.608702 (Thread-3): 10:15:30  On model.my_new_project.stg_jaffle_shop__orders: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "user", "target_name": "default", "node_id": "model.my_new_project.stg_jaffle_shop__orders"} */
+
+
+  create or replace view `dbtmodularity`.`dbt_luisscabral`.`stg_jaffle_shop__orders`
+  OPTIONS()
+  as with
+
+source as (
+    
+    select * from `dbt-tutorial`.`jaffle_shop`.`orders`
+    
+),
+
+transformed as (
+        
+      select 
+      
+        id as order_id,
+        user_id as customer_id,
+        status as order_status,
+        order_date,
+        
+        case 
+            when status not in ('returned','return_pending') 
+            then order_date 
+        end as valid_order_date,
+        
+        row_number() over (
+            partition by user_id 
+            order by order_date, id
+        ) as user_order_seq
+        
+      from source
+    
+)
+
+select * from transformed;
+
+
+2022-02-11 10:15:30.611521 (Thread-1): 10:15:30  On model.my_new_project.customer_orders: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "user", "target_name": "default", "node_id": "model.my_new_project.customer_orders"} */
+
+
+  create or replace view `dbtmodularity`.`dbt_luisscabral`.`customer_orders`
+  OPTIONS()
+  as select 
+    orders.id as order_id,
+    orders.user_id as customer_id,
+    last_name as surname,
+    first_name as givenname,
+    first_order_date,
+    order_count,
+    total_lifetime_value,
+    round(amount/100.0,2) as order_value_dollars,
+    orders.status as order_status,
+    payments.status as payment_status
+from `dbt-tutorial`.`jaffle_shop`.`orders` as orders
+
+join (
+      select 
+        first_name || ' ' || last_name as name, 
+        * 
+      from `dbt-tutorial`.`jaffle_shop`.`customers`
+) customers
+on orders.user_id = customers.id
+
+join (
+
+    select 
+        b.id as customer_id,
+        b.name as full_name,
+        b.last_name as surname,
+        b.first_name as givenname,
+        min(order_date) as first_order_date,
+        min(case when a.status NOT IN ('returned','return_pending') then order_date end) as first_non_returned_order_date,
+        max(case when a.status NOT IN ('returned','return_pending') then order_date end) as most_recent_non_returned_order_date,
+        COALESCE(max(user_order_seq),0) as order_count,
+        COALESCE(count(case when a.status != 'returned' then 1 end),0) as non_returned_order_count,
+        sum(case when a.status NOT IN ('returned','return_pending') then ROUND(c.amount/100.0,2) else 0 end) as total_lifetime_value,
+        sum(case when a.status NOT IN ('returned','return_pending') then ROUND(c.amount/100.0,2) else 0 end)/NULLIF(count(case when a.status NOT IN ('returned','return_pending') then 1 end),0) as avg_non_returned_order_value,
+        array_agg(distinct a.id) as order_ids
+
+    from (
+      select 
+        row_number() over (partition by user_id order by order_date, id) as user_order_seq,
+        *
+      from `dbt-tutorial`.`jaffle_shop`.`orders`
+    ) a
+
+    join ( 
+      select 
+        first_name || ' ' || last_name as name, 
+        * 
+      from `dbt-tutorial`.`jaffle_shop`.`customers`
+    ) b
+    on a.user_id = b.id
+
+    left outer join `dbt-tutorial`.`stripe`.`payment` c
+    on a.id = c.orderid
+
+    where a.status NOT IN ('pending') and c.status != 'fail'
+
+    group by b.id, b.name, b.last_name, b.first_name
+
+) customer_order_history
+on orders.user_id = customer_order_history.customer_id
+
+left outer join `dbt-tutorial`.`stripe`.`payment` payments
+on orders.id = payments.orderid
+
+where payments.status != 'fail';
+
+
+2022-02-11 10:15:31.356081 (Thread-87): handling poll request
+2022-02-11 10:15:31.356482 (Thread-87): 10:15:31  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f55e51b84c0>]}
+2022-02-11 10:15:31.357546 (Thread-87): sending response (<Response 24408 bytes [200 OK]>) to 10.0.31.57
+2022-02-11 10:15:31.541324 (Thread-2): 10:15:31  finished collecting timing info
+2022-02-11 10:15:31.541758 (Thread-2): 10:15:31  Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0727d2a0-31a5-4bef-b78e-93098fd73104', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fde8457c160>]}
+2022-02-11 10:15:31.542487 (Thread-2): 10:15:31  2 of 6 OK created view model dbt_luisscabral.stg_jaffle_shop__customers......... [OK in 1.05s]
+2022-02-11 10:15:31.542648 (Thread-2): 10:15:31  Finished running node model.my_new_project.stg_jaffle_shop__customers
+2022-02-11 10:15:31.544548 (Thread-4): 10:15:31  finished collecting timing info
+2022-02-11 10:15:31.544922 (Thread-4): 10:15:31  Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0727d2a0-31a5-4bef-b78e-93098fd73104', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fde84555280>]}
+2022-02-11 10:15:31.545216 (Thread-4): 10:15:31  4 of 6 OK created view model dbt_luisscabral.stg_stripe__payments............... [OK in 1.04s]
+2022-02-11 10:15:31.545325 (Thread-4): 10:15:31  Finished running node model.my_new_project.stg_stripe__payments
+2022-02-11 10:15:31.580497 (Thread-3): 10:15:31  finished collecting timing info
+2022-02-11 10:15:31.580873 (Thread-3): 10:15:31  Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0727d2a0-31a5-4bef-b78e-93098fd73104', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fde845a3ee0>]}
+2022-02-11 10:15:31.581171 (Thread-3): 10:15:31  3 of 6 OK created view model dbt_luisscabral.stg_jaffle_shop__orders............ [OK in 1.08s]
+2022-02-11 10:15:31.581278 (Thread-3): 10:15:31  Finished running node model.my_new_project.stg_jaffle_shop__orders
+2022-02-11 10:15:31.582505 (Thread-2): 10:15:31  Began running node model.my_new_project.int_orders
+2022-02-11 10:15:31.582740 (Thread-2): 10:15:31  5 of 6 START view model dbt_luisscabral.int_orders.............................. [RUN]
+2022-02-11 10:15:31.583015 (Thread-2): 10:15:31  Acquiring new bigquery connection "model.my_new_project.int_orders"
+2022-02-11 10:15:31.583111 (Thread-2): 10:15:31  Began compiling node model.my_new_project.int_orders
+2022-02-11 10:15:31.583198 (Thread-2): 10:15:31  Compiling model.my_new_project.int_orders
+2022-02-11 10:15:31.585611 (Thread-2): 10:15:31  Writing injected SQL for node "model.my_new_project.int_orders"
+2022-02-11 10:15:31.587279 (Thread-1): 10:15:31  finished collecting timing info
+2022-02-11 10:15:31.587720 (Thread-1): 10:15:31  Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0727d2a0-31a5-4bef-b78e-93098fd73104', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fde8465dee0>]}
+2022-02-11 10:15:31.588017 (Thread-1): 10:15:31  1 of 6 OK created view model dbt_luisscabral.customer_orders.................... [OK in 1.10s]
+2022-02-11 10:15:31.588127 (Thread-1): 10:15:31  Finished running node model.my_new_project.customer_orders
+2022-02-11 10:15:31.601451 (Thread-2): 10:15:31  finished collecting timing info
+2022-02-11 10:15:31.601600 (Thread-2): 10:15:31  Began executing node model.my_new_project.int_orders
+2022-02-11 10:15:31.603821 (Thread-2): 10:15:31  Writing runtime SQL for node "model.my_new_project.int_orders"
+2022-02-11 10:15:31.620888 (Thread-2): 10:15:31  Opening a new connection, currently in state closed
+2022-02-11 10:15:31.625333 (Thread-2): 10:15:31  On model.my_new_project.int_orders: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "user", "target_name": "default", "node_id": "model.my_new_project.int_orders"} */
+
+
+  create or replace view `dbtmodularity`.`dbt_luisscabral`.`int_orders`
+  OPTIONS()
+  as with
+
+orders as (
+
+    select * from `dbtmodularity`.`dbt_luisscabral`.`stg_jaffle_shop__orders`
+
+),
+
+payments as (
+
+    select * from `dbtmodularity`.`dbt_luisscabral`.`stg_stripe__payments`
+    where payment_status != 'fail'
+
+),
+
+order_totals as (
+
+    select
+
+        order_id,
+        payment_status,
+        sum(payment_amount) as order_value_dollars
+
+    from payments
+    group by 1, 2
+
+),
+
+joined as (
+
+    select
+
+        orders.*,
+        order_totals.payment_status,
+        order_totals.order_value_dollars
+
+    from orders 
+    left join order_totals
+        on orders.order_id = order_totals.order_id
+
+)
+
+select * from joined;
+
+
+2022-02-11 10:15:32.539192 (Thread-2): 10:15:32  finished collecting timing info
+2022-02-11 10:15:32.539671 (Thread-2): 10:15:32  Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0727d2a0-31a5-4bef-b78e-93098fd73104', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fde8456b070>]}
+2022-02-11 10:15:32.540196 (Thread-2): 10:15:32  5 of 6 OK created view model dbt_luisscabral.int_orders......................... [OK in 0.96s]
+2022-02-11 10:15:32.540318 (Thread-2): 10:15:32  Finished running node model.my_new_project.int_orders
+2022-02-11 10:15:32.541090 (Thread-3): 10:15:32  Began running node model.my_new_project.fct_customer_orders
+2022-02-11 10:15:32.541312 (Thread-3): 10:15:32  6 of 6 START view model dbt_luisscabral.fct_customer_orders..................... [RUN]
+2022-02-11 10:15:32.541546 (Thread-3): 10:15:32  Acquiring new bigquery connection "model.my_new_project.fct_customer_orders"
+2022-02-11 10:15:32.541637 (Thread-3): 10:15:32  Began compiling node model.my_new_project.fct_customer_orders
+2022-02-11 10:15:32.541724 (Thread-3): 10:15:32  Compiling model.my_new_project.fct_customer_orders
+2022-02-11 10:15:32.544738 (Thread-3): 10:15:32  Writing injected SQL for node "model.my_new_project.fct_customer_orders"
+2022-02-11 10:15:32.562648 (Thread-3): 10:15:32  finished collecting timing info
+2022-02-11 10:15:32.562895 (Thread-3): 10:15:32  Began executing node model.my_new_project.fct_customer_orders
+2022-02-11 10:15:32.565286 (Thread-3): 10:15:32  Writing runtime SQL for node "model.my_new_project.fct_customer_orders"
+2022-02-11 10:15:32.581525 (Thread-3): 10:15:32  Opening a new connection, currently in state closed
+2022-02-11 10:15:32.587121 (Thread-3): 10:15:32  On model.my_new_project.fct_customer_orders: /* {"app": "dbt", "dbt_version": "1.0.1", "profile_name": "user", "target_name": "default", "node_id": "model.my_new_project.fct_customer_orders"} */
+
+
+  create or replace view `dbtmodularity`.`dbt_luisscabral`.`fct_customer_orders`
+  OPTIONS()
+  as with
+
+customers as (
+
+    select * from `dbtmodularity`.`dbt_luisscabral`.`stg_jaffle_shop__customers`
+
+),
+
+orders as (
+
+    select * from `dbtmodularity`.`dbt_luisscabral`.`int_orders`
+
+),
+
+final as (
+
+    select
+
+        orders.*,
+
+        customers.surname,
+        customers.givenname,
+
+        -- Customer-level aggregations
+        min(orders.order_date) over(
+            partition by orders.customer_id
+        ) as first_order_date,
+
+        min(orders.valid_order_date) over(
+            partition by orders.customer_id
+        ) as first_non_returned_order_date,
+
+        max(orders.valid_order_date) over(
+            partition by orders.customer_id
+        ) as most_recent_non_returned_order_date,
+
+        count(*) over(
+            partition by orders.customer_id
+        ) as order_count,
+
+        sum(case when orders.valid_order_date is not null
+                then 1
+                else 0
+                end) over(
+            partition by orders.customer_id
+        ) as non_returned_order_count,
+
+        array_agg(distinct orders.order_id) over(
+            partition by orders.customer_id
+        ) as order_ids,
+
+        sum(case when orders.valid_order_date is not null
+                then orders.order_value_dollars
+                else 0
+                end) over(
+            partition by orders.customer_id
+        ) as total_lifetime_value
+
+    from orders
+    inner join customers
+        on orders.customer_id = customers.customer_id
+
+)
+
+select * from final;
+
+
+2022-02-11 10:15:32.700581 (Thread-88): handling poll request
+2022-02-11 10:15:32.700983 (Thread-88): 10:15:32  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f55e51394c0>]}
+2022-02-11 10:15:32.701970 (Thread-88): sending response (<Response 20979 bytes [200 OK]>) to 10.0.38.212
+2022-02-11 10:15:33.673949 (Thread-3): 10:15:33  finished collecting timing info
+2022-02-11 10:15:33.674415 (Thread-3): 10:15:33  Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0727d2a0-31a5-4bef-b78e-93098fd73104', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fde84536e20>]}
+2022-02-11 10:15:33.674762 (Thread-3): 10:15:33  6 of 6 OK created view model dbt_luisscabral.fct_customer_orders................ [OK in 1.13s]
+2022-02-11 10:15:33.674926 (Thread-3): 10:15:33  Finished running node model.my_new_project.fct_customer_orders
+2022-02-11 10:15:33.676664 (MainThread): 10:15:33  Acquiring new bigquery connection "master"
+2022-02-11 10:15:33.676971 (MainThread): 10:15:33  
+2022-02-11 10:15:33.677066 (MainThread): 10:15:33  Finished running 6 view models in 3.80s.
+2022-02-11 10:15:33.677148 (MainThread): 10:15:33  Connection 'master' was properly closed.
+2022-02-11 10:15:33.677214 (MainThread): 10:15:33  Connection 'model.my_new_project.customer_orders' was properly closed.
+2022-02-11 10:15:33.677276 (MainThread): 10:15:33  Connection 'model.my_new_project.int_orders' was properly closed.
+2022-02-11 10:15:33.677335 (MainThread): 10:15:33  Connection 'model.my_new_project.fct_customer_orders' was properly closed.
+2022-02-11 10:15:33.677394 (MainThread): 10:15:33  Connection 'model.my_new_project.stg_stripe__payments' was properly closed.
+2022-02-11 10:15:33.736036 (MainThread): 10:15:33  
+2022-02-11 10:15:33.736240 (MainThread): 10:15:33  Completed successfully
+2022-02-11 10:15:33.736344 (MainThread): 10:15:33  
+2022-02-11 10:15:33.736433 (MainThread): 10:15:33  Done. PASS=6 WARN=0 ERROR=0 SKIP=0 TOTAL=6
+2022-02-11 10:15:34.016926 (Thread-89): handling poll request
+2022-02-11 10:15:34.017303 (Thread-89): 10:15:34  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f55e51d3b80>]}
+2022-02-11 10:15:34.018677 (Thread-89): sending response (<Response 30749 bytes [200 OK]>) to 10.0.46.69
+2022-02-11 10:15:34.654271 (Thread-90): handling status request
+2022-02-11 10:15:34.654660 (Thread-90): 10:15:34  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f55e51d3490>]}
+2022-02-11 10:15:34.655229 (Thread-90): sending response (<Response 2016 bytes [200 OK]>) to 10.0.30.21
+2022-02-11 10:15:34.725326 (Thread-91): handling status request
+2022-02-11 10:15:34.725721 (Thread-91): 10:15:34  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f55e519d760>]}
+2022-02-11 10:15:34.726234 (Thread-91): sending response (<Response 2016 bytes [200 OK]>) to 10.0.20.79
+2022-02-11 10:57:40.294694 (Thread-92): handling status request
+2022-02-11 10:57:40.296883 (Thread-92): 10:57:40  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '776b97c0-dab5-4f2b-b955-83eb46580688', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f55e5146a00>]}
+2022-02-11 10:57:40.297395 (Thread-92): sending response (<Response 2016 bytes [200 OK]>) to 10.0.13.131

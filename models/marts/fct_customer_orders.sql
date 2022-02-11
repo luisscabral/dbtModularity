@@ -38,7 +38,10 @@ final as (
             partition by orders.customer_id
         ) as order_count,
 
-        sum(nvl2(orders.valid_order_date, 1, 0)) over(
+        sum(case when orders.valid_order_date is not null
+                then 1
+                else 0
+                end) over(
             partition by orders.customer_id
         ) as non_returned_order_count,
 
@@ -46,7 +49,10 @@ final as (
             partition by orders.customer_id
         ) as order_ids,
 
-        sum(nvl2(orders.valid_order_date, orders.order_value_dollars, 0)) over(
+        sum(case when orders.valid_order_date is not null
+                then orders.order_value_dollars
+                else 0
+                end) over(
             partition by orders.customer_id
         ) as total_lifetime_value
 
